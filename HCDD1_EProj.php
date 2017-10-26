@@ -11,6 +11,7 @@
 	<?php
 	include "connection.php";
   include 'boot.html';
+  include 'rigo.html';
 
   ?>
   <body>
@@ -21,15 +22,20 @@
     </h1>
 </div>
   <?php
-
+  //Setup  filter by default
+  if(isset ($_POST['filter'])){
+ $search_filter = $_POST['filter'];
+ }else{
+   $search_filter = 'Proj_id';
+ }
 	//Search all db
-	$strSQL = "SELECT * FROM HCDD1Prj ORDER BY Proj_id DESC";
+	$strSQL = "SELECT * FROM HCDD1Prj ORDER BY $search_filter DESC";
 
 
 	if (isset($_POST['rank0'])) {
 		$select_1 = $_POST['selectowner'];
 		//$select_rank = $_POST['selectrank'];
-		$strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '{$select_1}' ORDER BY Proj_id DESC";
+		$strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '{$select_1}' ORDER BY $search_filter DESC";
 		$rs = mysql_query($strSQL, $con);
 	};
 
@@ -43,11 +49,13 @@
 
    if(isset($_POST['statusF']) && $_POST['statusF']!="%"){
 
-     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' AND (Status='{$_POST['statusF']}')OR ProjOfficial LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjDesc LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjNo LIKE '$search_term' AND (Status='{$_POST['statusF']}') ORDER BY Proj_id DESC";
+
+
+     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' AND (Status='{$_POST['statusF']}')OR ProjOfficial LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjDesc LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjNo LIKE '%$search_term%' AND (Status='{$_POST['statusF']}') ORDER BY $search_filter DESC";
 
    }else{
 
-     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' OR ProjOfficial LIKE '%{$search_term}%' OR ProjDesc LIKE '%{$search_term}%' OR ProjNo LIKE '%{$search_term}%' ORDER BY Proj_id DESC";
+     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' OR ProjOfficial LIKE '%{$search_term}%' OR ProjDesc LIKE '%{$search_term}%' OR ProjNo LIKE '%{$search_term}%' ORDER BY $search_filter DESC";
 
    }
 
@@ -56,7 +64,7 @@
 	};
 
 	if (isset($_POST['Reset'])) {
-		$strSQL = "SELECT * FROM HCDD1Prj ORDER BY Proj_id DESC";
+		$strSQL = "SELECT * FROM HCDD1Prj ORDER BY $search_filter DESC";
 		$rs = mysql_query($strSQL, $con);
 	};
 
@@ -72,25 +80,39 @@
 
 	if	(isset($_POST['add'])){
 		$AddQuery = "INSERT INTO HCDD1Prj (ProjNo, Owner, Pct, ProjOfficial, ProjDesc, EngName, Estimate, AcctNo, ContractNo, StartDate, EndDate, Status, PList) VALUES ('$_POST[uprojno]','$_POST[uowner]','$_POST[upct]','$_POST[uprojofficial]','$_POST[uprojdesc]','$_POST[uengname]','$_POST[uestimate]','$_POST[uacctno]','$_POST[ucontractno]','$_POST[ustartdate]','$_POST[uenddate]','$_POST[status]','$_POST[uplist]')";
-		mysql_query($AddQuery, $con) or die(mysql_error());
+		mysql_query($AddQuery, $con);
 	};
 
 	// Pull Down
 	echo "<form action=HCDD1_EProj.php method=post class='form-group'>";
 
-  echo "<input type='text' name='search_box'   class='form-control input-lg' align='center' placeholder=' Enter query' /> </br></br></br>";
-  echo "<select name='statusF' class='form-control'>";
-  echo "<option value='%'>Status </option>";
+  echo "<input type='text' name='search_box'   class='form-control input-lg' align='center' placeholder=' Enter query' /> &nbsp; &nbsp; ";
+  echo "<select name='statusF' class='form-control input-lg'>";
+  echo "<option value='%'>Status </option> ";
   echo "<option value='pen'>Pending</option>";
   echo "<option value='dro'>Droped</option>";
   echo "<option value='com'>Completed</option>";
-  echo "</select></br></br>";
-	echo "<input type='submit' class='btn btn-default' name='search' value='Search'>";
+  echo"</select>";
+  echo "<select name='filter' class='form-control input-lg'>";
+  echo "<option value='Proj_id'>Ordert by </option> ";
+  echo "<option value='Proj_id'>Project ID</option>";
+  echo "<option value='ProjNo'>Project Number</option>";
+  echo "<option value='Owner'>Owner</option>";
+  echo "<option value='Pct'>Pct</option>";
+  echo "<option value='ProjOfficial'>Project Name</option>";
+  echo "<option value='EngName'>Engineer Name</option>";
+  echo "<option value='AcctNo'>Acct No</option>";
+  echo "<option value='ContractNo'>Contract No</option>";
+  echo "<option value='StartDate'>Start Date</option>";
+  echo "<option value='Status'>Status</option>";
+
+  echo "</select> &nbsp;";
+	echo "<input type='submit' class='btn btn-default' name='search' value='Search'>&nbsp;";
 	echo "<input type='submit' class='btn btn-default' name=Reset value=Reset><hr>";
 
 		//Select Pct to Pull Down for Filter
   echo"<div class='dropdown show'>";
-	echo "<select name='selectowner' class='form-control'>";
+	echo "<select name='selectowner' class='form-control input-lg'>";
 	echo "<option value='%'>Owner </option>";
 	echo "<option value='HCDD1'>HCDD1</option>";
 	echo "<option value='Pct1'>Pct1</option>";
@@ -99,10 +121,10 @@
 	echo "<option value='Pct4'>Pct4</option>";
 	echo "<option value='Misc'>Misc</option>";
 	echo "<option value='DR'>DR</option>";
-	echo "</select></br></br>";
+	echo "</select>&nbsp; &nbsp;";
 
 	/*	//Select Pct to Pull Down for Filter by table data
-	$strSQLp1 = "SELECT Pct FROM HCDD1Prj ORDER BY Proj_id DESC";
+	$strSQLp1 = "SELECT Pct FROM HCDD1Prj ORDER BY $search_filter DESC";
 	$rsp1 = mysql_query($strSQLp1, $con);
 	echo "<select name='selectpct'>";
 	echo "<option value='%'> </option>";
