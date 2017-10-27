@@ -15,13 +15,23 @@
   include 'boot.html';
   //This is only an alert to let people know they are in my computer
   include 'rigo.html';
-  $status= ['Status','Pending','Completed', 'Droped'];
-  $statusV=['%','pen','com','dro'];
+  $status= ['Status','Construction','Design', 'Hold','Pending','Drop','Completed'];
+  $statusV=['%','const','desig','hold','pendi','drop','compl'];
   $filter=['Order by','Project Id','Project Number','Owner','Pct','Project Name','Engineer Name', 'Acct No','Contract No'. 'Start Date','Status'];
   $filterV=['Proj_id','Proj_id','ProjNo', 'Owner','Pct','ProjOfficial','EngName','AcctNo', 'ContractNo','StartDate','Status'];
 
   ?>
   <body>
+  <style type="text/css">
+    @media print {
+
+
+      table th {
+        -webkit-print-color-adjust: exact !important;
+        background-color: red !important;
+      }
+    }
+  </style>
     <div id="t1">
   <div class="jumbotron">
     <h1 style="color:#51b949">
@@ -102,7 +112,7 @@
 
   echo "<input type='text' name='search_box'   class='form-control input-lg' align='center' placeholder=' Enter query' /> &nbsp; &nbsp; ";
   echo "<select name='statusF' class='form-control input-lg'>";
-  for($i=0;$i<4;$i++){
+  for($i=0;$i<7;$i++){
        if(isset($_POST['statusF']) && $_POST['statusF']!="%" && $_POST['statusF']==$statusV[$i]){
     echo "<option value='$statusV[$i]' selected> $status[$i] </option> ";
   }else{
@@ -204,7 +214,7 @@
 	echo "<td ><input type=text name=ucontractno></td>";
 	echo "<td ><input type=date name=ustartdate></td>";
 	echo "<td ><input type=date name=uenddate></td>";
-  	echo "<td  ><input type=text name=status maxlength='3' placeholder='Mandatory Field'></td>";
+  	echo "<td  ><input type=text name=status maxlength='5' placeholder='Mandatory Field'></td>";
 	echo "<td  ><input type=text name=uplist maxlength='1' placeholder='Mandatory Field'></td>";
 	echo "<td><input type=hidden name=uhidden></td>";
 	echo "<td>" . "<input type=submit name=add value=New" . "> </td>";
@@ -229,7 +239,7 @@
 	echo "<td bgcolor=#FFFFFF>" . "<input type=text name=contractno value=" . $row['ContractNo'] . "> </td>";
 	echo "<td bgcolor=#FFFFFF>" . "<input type=date name=startdate value=" . $row['StartDate'] . "> </td>";
 	echo "<td bgcolor=#FFFFFF>" . "<input type=date name=enddate value=" . $row['EndDate'] . "> </td>";
-  echo "<td bgcolor=#FFFFFF > " . "<input type=text name=status maxlength='3' size='3' value=" . $row['Status'] . "> </td>";
+  echo "<td bgcolor=#FFFFFF > " . "<input type=text name=status maxlength='5' size='5' value=" . $row['Status'] . "> </td>";
 	echo "<td bgcolor=#FFFFFF >" . "<input type=text  size='1' maxlength='1' name=plist value=" . $row['PList'] . ">  &nbsp;&nbsp;&nbsp;&nbsp;   <input type=submit name=update value=Update" . "> <input type=submit name=delete value=Del." . "> </td>";
 	echo "<td>" . "<input type=hidden name=hidden value=" . $row['Proj_id'] ."> </td>";
 	echo "</tr>";
