@@ -9,9 +9,16 @@
 
 
 	<?php
+  //Include the sql connection
 	include "connection.php";
+  // Includes the boot header which has shared css and the printing configuration
   include 'boot.html';
+  //This is only an alert to let people know they are in my computer
   include 'rigo.html';
+  $status= ['Status','Pending','Completed', 'Droped'];
+  $statusV=['%','pen','com','dro'];
+  $filter=['Order by','Project Id','Project Number','Owner','Pct','Project Name','Engineer Name', 'Acct No','Contract No'. 'Start Date','Status'];
+  $filterV=['Proj_id','Proj_id','ProjNo', 'Owner','Pct','ProjOfficial','EngName','AcctNo', 'ContractNo','StartDate','Status'];
 
   ?>
   <body>
@@ -22,94 +29,108 @@
     </h1>
 </div>
   <?php
-  //Setup  filter by default
+  $orderBy='DESC';
+
+  if (isset($_POST['check'])&&$_POST['check']=='yes'){
+    $orderBy='ASC';
+  }
+  //Setup  filter by default which sets the criteria seraches are going to be done
   if(isset ($_POST['filter'])){
  $search_filter = $_POST['filter'];
  }else{
    $search_filter = 'Proj_id';
  }
-	//Search all db
-	$strSQL = "SELECT * FROM HCDD1Prj ORDER BY $search_filter DESC";
+	//Search all db for original page pupulation
+	$strSQL = "SELECT * FROM HCDD1Prj ORDER BY $search_filter $orderBy";
 
-
+//If serach button is pressed
 	if (isset($_POST['rank0'])) {
 		$select_1 = $_POST['selectowner'];
 		//$select_rank = $_POST['selectrank'];
-		$strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '{$select_1}' ORDER BY $search_filter DESC";
+		$strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '{$select_1}' ORDER BY $search_filter $orderBy";
 		$rs = mysql_query($strSQL, $con);
 	};
 
 	if (isset($_POST['search'])) {
 
-
+//Check if search term is empty , if so make it a wild card
 		$search_term = $_POST['search_box'];
     if(strlen($search_term)<1){
       $search_term="%";
     }
-
+//If post status is set and not equal wild card AKA default
    if(isset($_POST['statusF']) && $_POST['statusF']!="%"){
 
 
 
-     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' AND (Status='{$_POST['statusF']}')OR ProjOfficial LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjDesc LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjNo LIKE '%$search_term%' AND (Status='{$_POST['statusF']}') ORDER BY $search_filter DESC";
-
-   }else{
-
-     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' OR ProjOfficial LIKE '%{$search_term}%' OR ProjDesc LIKE '%{$search_term}%' OR ProjNo LIKE '%{$search_term}%' ORDER BY $search_filter DESC";
+     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' AND (Status='{$_POST['statusF']}')OR ProjOfficial LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjDesc LIKE '%{$search_term}%'AND (Status='{$_POST['statusF']}') OR ProjNo LIKE '%$search_term%' AND (Status='{$_POST['statusF']}') ORDER BY $search_filter $orderBy";
 
    }
+   //Else do a regular look up without status filter
+   else{
 
+     $strSQL = "SELECT * FROM HCDD1Prj WHERE Owner LIKE '%{$search_term}%' OR ProjOfficial LIKE '%{$search_term}%' OR ProjDesc LIKE '%{$search_term}%' OR ProjNo LIKE '%{$search_term}%' ORDER BY $search_filter $orderBy";
+
+   }
+  //Execute query and assign to result variable
 
 		$rs = mysql_query($strSQL, $con);
 	};
-
+// If reseet button is pressed
 	if (isset($_POST['Reset'])) {
-		$strSQL = "SELECT * FROM HCDD1Prj ORDER BY $search_filter DESC";
+		$strSQL = "SELECT * FROM HCDD1Prj ORDER BY $search_filter $orderBy";
 		$rs = mysql_query($strSQL, $con);
 	};
-
+// IF and update button is pressedi it will update that row
 	if	(isset($_POST['update'])){
 		$UpdateQuery = "UPDATE HCDD1Prj SET Proj_id='$_POST[projid]', ProjNo='$_POST[projno]', Owner='$_POST[owner]', Pct='$_POST[pct]', ProjOfficial='$_POST[projofficial]', ProjDesc='$_POST[projdesc]', EngName='$_POST[engname]', Estimate='$_POST[estimate]', AcctNo='$_POST[acctno]', ContractNo='$_POST[contractno]', StartDate='$_POST[startdate]', EndDate='$_POST[enddate]',Status='$_POST[status]', PList='$_POST[plist]' WHERE Proj_id='$_POST[hidden]'";
 		mysql_query($UpdateQuery, $con) or die(mysql_error());
 	};
-
+// If deleted button is pressesd go ahead an delete that entry
 	if	(isset($_POST['delete'])){
 		$DeleteQuery = "DELETE FROM HCDD1Prj WHERE Proj_id='$_POST[hidden]'";
 		mysql_query($DeleteQuery, $con);
 	};
-
+// If add button is pressed fo ahead and add new entry
 	if	(isset($_POST['add'])){
 		$AddQuery = "INSERT INTO HCDD1Prj (ProjNo, Owner, Pct, ProjOfficial, ProjDesc, EngName, Estimate, AcctNo, ContractNo, StartDate, EndDate, Status, PList) VALUES ('$_POST[uprojno]','$_POST[uowner]','$_POST[upct]','$_POST[uprojofficial]','$_POST[uprojdesc]','$_POST[uengname]','$_POST[uestimate]','$_POST[uacctno]','$_POST[ucontractno]','$_POST[ustartdate]','$_POST[uenddate]','$_POST[status]','$_POST[uplist]')";
 		mysql_query($AddQuery, $con);
 	};
-
+  // First level of search tools
 	// Pull Down
 	echo "<form action=HCDD1_EProj.php method=post class='form-group'>";
 
   echo "<input type='text' name='search_box'   class='form-control input-lg' align='center' placeholder=' Enter query' /> &nbsp; &nbsp; ";
   echo "<select name='statusF' class='form-control input-lg'>";
-  echo "<option value='%'>Status </option> ";
-  echo "<option value='pen'>Pending</option>";
-  echo "<option value='dro'>Droped</option>";
-  echo "<option value='com'>Completed</option>";
+  for($i=0;$i<4;$i++){
+       if(isset($_POST['statusF']) && $_POST['statusF']!="%" && $_POST['statusF']==$statusV[$i]){
+    echo "<option value='$statusV[$i]' selected> $status[$i] </option> ";
+  }else{
+    echo "<option value='$statusV[$i]'> $status[$i] </option> ";
+  }
+
+  }
+
   echo"</select>";
   echo "<select name='filter' class='form-control input-lg'>";
-  echo "<option value='Proj_id'>Ordert by </option> ";
-  echo "<option value='Proj_id'>Project ID</option>";
-  echo "<option value='ProjNo'>Project Number</option>";
-  echo "<option value='Owner'>Owner</option>";
-  echo "<option value='Pct'>Pct</option>";
-  echo "<option value='ProjOfficial'>Project Name</option>";
-  echo "<option value='EngName'>Engineer Name</option>";
-  echo "<option value='AcctNo'>Acct No</option>";
-  echo "<option value='ContractNo'>Contract No</option>";
-  echo "<option value='StartDate'>Start Date</option>";
-  echo "<option value='Status'>Status</option>";
+  for($i=0;$i<10;$i++){
+       if(isset($_POST['filter']) && $_POST['filter']==$filterV[$i]){
+    echo "<option value='$filterV[$i]' selected> $filter[$i] </option> ";
+  }else{
+    echo "<option value='$filterV[$i]'> $filter[$i] </option> ";
+  }
+
+  }
 
   echo "</select> &nbsp;";
+  if (isset($_POST['check'])&&$_POST['check']=='yes'){
+  echo "<div class='checkbox'><label><input type='checkbox' name='check' value='yes' checked> Ascending </label></div>";
+}else{
+    echo "<div class='checkbox'><label><input type='checkbox' name='check' value='yes'> Ascending </label></div>";
+}
 	echo "<input type='submit' class='btn btn-default' name='search' value='Search'>&nbsp;";
 	echo "<input type='submit' class='btn btn-default' name=Reset value=Reset><hr>";
-
+    //Second line filter options
 		//Select Pct to Pull Down for Filter
   echo"<div class='dropdown show'>";
 	echo "<select name='selectowner' class='form-control input-lg'>";
@@ -134,6 +155,7 @@
 	echo "</select>";
 	*/
 
+//Filter button
 	echo "<input type=submit name=rank0 value=Filter class='btn btn-default'><hr>";
 	echo "</form>";
   echo"</div>";
@@ -146,7 +168,7 @@
 	//Table Columns
   echo"<div id='t2'>";
 	echo "<table  class='table table-hover' id='table1'>
-	<tr style='color:white;' bgcolor=#2f6e2b>
+	<tr style='color:white;' bgcolor='#275c24' class='row1'>
 	<th  id='th1'>Proj ID</th>
 	<th >Proj No</th>
 	<th>Owner</th>
@@ -208,7 +230,7 @@
 	echo "<td bgcolor=#FFFFFF>" . "<input type=date name=startdate value=" . $row['StartDate'] . "> </td>";
 	echo "<td bgcolor=#FFFFFF>" . "<input type=date name=enddate value=" . $row['EndDate'] . "> </td>";
   echo "<td bgcolor=#FFFFFF > " . "<input type=text name=status maxlength='3' size='3' value=" . $row['Status'] . "> </td>";
-	echo "<td bgcolor=#FFFFFF >" . "<input type=text  size='1' maxlength='1' name=plist value=" . $row['PList'] . ">  &nbsp;&nbsp;&nbsp;&nbsp;   <input type=submit name=update value=Update" . ">&nbsp;&nbsp;&nbsp;&nbsp; <input type=submit name=delete value=Del." . "> </td>";
+	echo "<td bgcolor=#FFFFFF >" . "<input type=text  size='1' maxlength='1' name=plist value=" . $row['PList'] . ">  &nbsp;&nbsp;&nbsp;&nbsp;   <input type=submit name=update value=Update" . "> <input type=submit name=delete value=Del." . "> </td>";
 	echo "<td>" . "<input type=hidden name=hidden value=" . $row['Proj_id'] ."> </td>";
 	echo "</tr>";
 	echo "</form>";
@@ -239,6 +261,7 @@
 					i,
 					printPage;
 				for (i = 0; i < pageCount; i++) {
+
 					printPage = $("<div></div>").css({
 						"overflow": "hidden",
 						"width": pageWidth,
