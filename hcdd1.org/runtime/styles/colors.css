@@ -1,0 +1,319 @@
+body {
+    background: url("../../templates/t_images/bkg.jpg");
+    background-position: center top;
+    background-color: #fff;
+    background-size: cover;
+}
+
+/*--------------------------------------------------------------------------------Sites Main Colors-------------------------------------------------------------------------------- */
+
+.topnavcolor {
+    background: #000;
+}
+.secondarycolor {
+    background: #840c24;
+}
+.tertiarycolor {
+    background: #453f40;
+}
+.highlightcolor {
+    background: #292626;
+}
+
+/*--------------------------------------------------------------------------------Theme Color Page--------------------------------------------------------------------------------*/
+
+.color-block {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+.theme-headline {
+    width: 100%;
+    display: table;
+    border-bottom: 3px solid #333;
+    padding: 0;
+    margin: 0;
+}
+.btn-small {
+    width: 100px !important;
+    display: inline-block !important;
+}
+
+/*--------------------------------------------------------------------------------Other Site Colors--------------------------------------------------------------------------------*/
+
+#header{
+    background: url("../../templates/t_images/headerbkg.jpg") no-repeat center;
+}
+#contentwrapperin {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(119, 119, 119, 0.2);
+}
+#contentmiddle_hp {
+    background: #ececec;
+    box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.graybkg {
+    background: #F3F3F3;
+    border: 1px solid #ccc;
+}
+/*--------------------------------------------------------------------------------Menu Colors--------------------------------------------------------------------------------*/
+
+
+/*-----------------MAIN MENU-----------------*/
+
+
+
+#menu .RadMenu_ezSilk .rmSlide .rmVertical {
+    background: #840c24;
+}
+
+/* drop rollover */
+
+#menu .RadMenu_ezSilk .rmGroup .rmLink:hover {
+    background-color: #2A2626;
+    color: #fff !important;
+}
+
+/*-----------------VERTICAL AND HORIZONTAL MENUS(inside the Content Wrapper)-----------------*/
+
+
+/***Background and text color***/
+
+#maincontent .RadMenu_ezSilk .rmRootGroup {
+    background-color: transparent;
+    border: 1px solid #c6c6c6 !important;
+    width: 100% !important;
+    padding: 10px 0 !important;
+}
+#maincontent .RadMenu_ezSilk .rmRootGroup ul.rmGroup {
+    background: #fff;
+}
+
+/***Background and text color on hover***/
+
+#maincontent .RadMenu_ezSilk .rmRootGroup > .rmItem:hover{
+    background-color: #d9d9d9;
+}
+#maincontent .RadMenu_ezSilk .rmRootGroup .rmItem:hover span,
+#maincontent .RadMenu_ezSilk .rmRootGroup .rmItem:hover a {
+    color: #0e1929;
+}
+
+/*Hover on Flyout*/
+
+#maincontent .RadMenu_ezSilk .rmGroup .rmItem:hover {
+    background-color: #ccc;
+}
+
+/***VERTICAL MENU Text Colors***/
+
+#maincontent .RadMenu_ezSilk .rmVertical .rmItem .rmText,
+#maincontent .RadMenu_ezSilk,
+#maincontent .RadMenu_ezSilk .rmGroup .rmLink {
+    color: #0e1929;
+}
+
+/*-----------------PANEL BAR-----------------*/
+
+
+/***Backgorund and text color***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpLink,
+#contentwrapperin .RadPanelBar_ezMetro .rpHeaderTemplate {
+    color: #fff;
+    background-color: #840c24;
+}
+
+/***1st selected hover bar***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpLink.rpExpanded:hover,
+#contentwrapperin .RadPanelBar_ezMetro .rpHeaderTemplate.rpExpanded:hover {
+    color: #fff;
+    background-color: #2A2626;
+}
+
+/***1st selected bar***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpLink.rpFocused,
+#contentwrapperin .RadPanelBar_ezMetro .rpHeaderTemplate.rpFocused {
+    color: #fff;
+    background-color: #2A2626;
+}
+
+/***Backgorund and text color on hover (exluding first item)***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpLink:hover,
+#contentwrapperin .RadPanelBar_ezMetro .rpHeaderTemplate:hover {
+    color: #fff;
+    background-color: #2A2626;
+}
+
+/***Background and text color on focus***/
+
+.RadPanelBar_ezMetro .rpLink.rpFocused,
+.RadPanelBar_ezMetro .rpHeaderTemplate.rpFocused {
+    color: #fff;
+}
+
+/***background and text color for submenu item***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpRootGroup {
+    background: efefef;
+}
+
+/***Background and text color for sub menu item that is selected***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpGroup .rpItem .rpLink.rpExpanded,
+#contentwrapperin .RadPanelBar_ezMetro .rpGroup .rpItem .rpHeaderTemplate.rpExpanded {
+    background-color: #efefef;
+}
+
+/***Background and text color for submenu item on hover***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpGroup .rpItem .rpLink:hover,
+#contentwrapperin .RadPanelBar_ezMetro .rpGroup .rpItem .rpHeaderTemplate:hover {
+    color: #333;
+    background-color: #d7d7d7;
+}
+
+/***Background and text color for a SUB(2nd level) submenu item that is selected***/
+
+#contentwrapperin .RadPanelBar_ezMetro .rpGroup .rpItem .rpLink.rpSelected,
+#contentwrapperin .RadPanelBar_ezMetro .rpGroup .rpItem .rpHeaderTemplate.rpSelected {
+    color: #333;
+    background-color: #d7d7d7;
+}
+
+/*-----------------TAB STRIPS(Make sure both SETS are the same)-----------------*/
+
+
+/*----Styles for preview/actual site----*/
+
+html .RadTabStrip_ezMetroTouch .rtsLink:hover {
+    background-color: #d7d7d7;
+}
+
+/***The Selected Tab Colors***/
+
+html .RadTabStrip_ezMetroTouch .rtsLevel1 .rtsSelected,
+html .RadTabStrip_ezMetroTouch .rtsLevel1 .rtsSelected:hover {
+    background-color: #fff !important;
+    border: 0px solid #F6F6F4 !important;
+    border-bottom: 0px !important;
+    position: relative;
+}
+html .RadTabStrip_ezMetroTouch .rtsLevel1 .rtsSelected:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}
+/***Selected Tab Text Color***/
+
+html .RadTabStrip_ezMetroTouch .rtsLevel1 .rtsSelected .rtsTxt {
+    color: #767676;
+}
+
+/***Non-Selected Tab Text Color***/
+
+html .RadTabStrip_ezMetroTouch .rtsLink {
+    color: #767676 !important;
+    background-color: #c7c7c7;
+    border-top-right-radius: 7px !important;
+    border-top-left-radius: 7px !important;
+}
+
+/***Border for the entire tab menu***/
+
+.RadTabStripTop_ezMetroTouch .rtsLevel1 {
+    border-bottom: 0px solid #fff !important;
+}
+
+/*----Styles for editor----*/
+
+
+/***Selected Tab Colors***/
+
+html .RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected,
+html .RadTabStrip_MetroTouch .rtsLevel1 .rtsSelected:hover {
+    background-color: #fff !important;
+    border-color: #e7762a !important;
+}
+
+/***Text Color***/
+
+html .RadTabStrip_MetroTouch .rtsLevel1 .rtsLink {
+    color: #840c24 !important;
+}
+
+/***Border for the entire tab menu***/
+
+.RadTabStripTop_MetroTouch .rtsLevel1 {
+    border-bottom: 0px solid #fff !important;
+}
+
+/*-----------------DROP DOWN MENUS(in content wrapper)-----------------*/
+
+#maincontent .RadDropDownList_ezMetro .rddlInner {
+    color: #4e4e4e;
+    background: #fff;
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+/***Dropdown***/
+
+.rddlPopup_ezMetro {
+    border-color: #ccc;
+    color: #4e4e4e;
+    border: 0px solid #ccc;
+    background-color: #ccc;
+    font-size: 14px;
+    font-family: "ralewayregular", Arial, Helvetica, sans-serif;
+}
+.rddlPopup_ezMetro a {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+.rddlPopup_ezMetro .rddlItemHovered {
+    color: #000;
+    background-color: #2f2f2f;
+}
+.rddlPopup_ezMetro .rddlItemHovered a{
+    color:#fff;
+}
+
+/*--------------------------------------------------------------------------------Search Box--------------------------------------------------------------------------------*/
+
+#topnav #searchbox {
+    background: rgba(255, 255, 255, 1);
+}
+#topnav #searchbox.focused{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3) inset;
+}
+#topnav #searchbox .input-wrapper input {
+    background: transparent;
+    border: 0px;
+    outline: 0;
+    color: #919191;
+}
+#topnav #searchbox .input-wrapper input:focus {
+    background: transparent;
+    border: 0px;
+    outline: 0;
+}
+#topnav #searchbox .input-wrapper button {
+    background: transparent;
+    outline: 0;
+    border: 0;
+}
+#topnav #searchbox .input-wrapper button:hover {
+    background: transparent;
+}
+#topnav #searchbox .input-wrapper button:active,
+#topnav #searchbox .input-wrapper button:focus {
+    background: transparent;
+}

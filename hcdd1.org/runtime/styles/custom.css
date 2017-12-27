@@ -1,0 +1,129 @@
+/*-------------------------------Emergency System-------------------------------------------*/
+
+#emergency-alert {
+    position: relative;
+    z-index: 9999;
+    width: 100%;
+    transition: all 1.5s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+#emergencywrapper {
+    background: #FFD800;
+    transition: all 1.5s ease;
+}
+#emergencywrapper .editbox {
+    margin-top: 50px;
+}
+#emergencywrapper .widgetitem {
+    width: 94%;
+    float: none;
+}
+#emergencywrapper .eztext_area {
+    padding: 10px;
+}
+#emergencyin {
+    position: relative;
+}
+#emergencyin .ion-android-alert {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 30px;
+    color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#emergencyin .ion-ios-close-empty {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    font-size: 35px;
+    z-index: #999;
+}
+#emergencyin .ion-ios-close-empty:hover {
+    cursor: pointer;
+}
+@media screen and (max-width:700px) {
+    #emergencywrapper .eztext_area {
+        padding: 10px 20px;
+    }
+    #emergencyin .ion-ios-close-empty {
+        right: 10px;
+    }
+}
+
+/*----------------------Mobile Wrap Toggle ----------------------*/
+.mobilewrappercontainer{
+    width: 100%;
+}
+.ezMobileToggle {
+    display: block;
+    padding: 15px 0;
+    color: #2f2f2f;
+    font-family: "pt_sansregular";
+    line-height: 100%;
+    font-size: 22px;
+    width:94%;
+    margin:0 3%;
+}
+.ezMobileToggle:after {
+    content: "\f104";
+    font-size: 14px;
+    font-family: "Ionicons";
+    color: inherit;
+    float: right;
+}
+.mobilewrapper {
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+    width: 100%;
+}
+.mobilewrapper.collapsed{
+    max-height: 0px !important;
+}
+.mobilewrapper.expanded {
+    height: auto;
+    opacity: 1;
+    transition: all 1s ease;
+    border-top: 1px solid #ccc;
+}
+
+/*--------------------------------------------------------------------------Custom Classes--------------------------------------------------------------------------*/
+.RadTabStrip{
+    height: auto !important;
+    height: initial !important;
+}
+.RadMultiPage {
+    height: auto !important;
+    height: initial !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    position: relative;
+}
+.RadMultiPage .rmpView{
+    width: 100%;
+}
+html #contentwrapper .RadTabStrip_ezMetroTouch + div > .rmpView {
+    background: #fff;
+    height: auto;
+    height: initial;
+    padding: 15px;
+    min-height: 200px;
+    border: 2px solid #F6F6F4;
+    width: 100%;
+}
+html #contentwrapper #contentmiddle_hp .RadTabStrip_ezMetroTouch + div > .rmpView {
+    border:0px;
+}

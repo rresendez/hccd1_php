@@ -1,0 +1,333 @@
+/*
+- Name: megamenu.js - style.css
+- Version: 1.0
+- Latest update: 29.01.2016.
+- Author: Mario Loncarek
+- Author web site: http://marioloncarek.com
+*/
+
+.ezMegaWrapper {
+    font-family: 'Segoe UI', sans-serif;
+    color: #999;
+    width: 100%;
+    margin: 0 auto;
+    background: #e9e9e9;
+    font-size: 16px;
+}
+.menu-mobile {
+    display: none;
+    padding: 20px;
+    color: #333;
+}
+.menu-mobile:after {
+    content: "\f394";
+    font-family: "Ionicons";
+    font-size: 2.5rem;
+    /*pad bar icon */
+    padding-top: 5px;
+    float: right;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+}
+.menu-dropdown-icon:after {
+    content: "";
+    font-family: "Ionicons";
+    cursor: pointer;
+    float: right;
+    background: transparent;
+    color: #333;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: 0;
+    height: 70px;
+    width: 70px;
+}
+.menu-dropdown-icon:before {
+    content: "\f104";
+    font-family: "Ionicons";
+    display: none;
+    cursor: pointer;
+    float: right;
+    background: transparent;
+    color: #333;
+    position: relative;
+    right: 30px;
+    top: 30px;
+    z-index: 2;
+    transition: all .5s ease;
+    transform: rotateZ(0deg);
+}
+.menu-dropdown-icon.is-expanded:before {
+    transition: all .5s ease;
+    transform: rotateZ(180deg);
+}
+
+/*.menu > ul*/
+
+.menu .main {
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
+    box-sizing: border-box;
+}
+
+/*.menu > ul:before,
+.menu > ul:after*/
+
+.menu .main:before,
+.menu .main:after {
+    content: "";
+    display: table;
+}
+
+/*.menu > ul:after*/
+
+.menu .main:after {
+    clear: both;
+}
+
+/*.menu > ul > li*/
+
+.menu .top-link {
+    float: left;
+    background: #e9e9e9;
+    padding: 0;
+    margin: 0;
+}
+
+/*.menu > ul > li a*/
+
+.menu .top-link a,
+.menu .top-link span {
+    text-decoration: none;
+    padding: 1.5em 3em;
+    display: block;
+    color: #666;
+    font-size: 1em;
+    /* top level font color */
+}
+
+/*.menu > ul > li:hover*/
+
+.menu .top-link:hover {
+    background: #f0f0f0;
+}
+
+/*.menu > ul > li > ul*/
+
+.menu .dropdown {
+    display: none;
+    width: 100%;
+    background: #f0f0f0;
+    padding: 20px;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    border-radius: 0px 0 10px 10px;
+}
+
+/*.menu > ul > li > ul:before,
+.menu > ul > li > ul:after*/
+
+.menu .dropdown:before,
+.menu .dropdown:after {
+    content: "";
+    display: table;
+}
+
+/*.menu > ul > li > ul:after */
+
+.menu .dropdown:after {
+    clear: both;
+}
+
+/*.menu > ul > li > ul > li*/
+
+.menu .column {
+    margin: 0;
+    padding-bottom: 0;
+    list-style: none;
+    width: 25%;
+    background: none;
+    float: left;
+    padding: 0;
+}
+
+/*.menu > ul > li > ul > li a*/
+
+.menu .col-header a,
+.menu .col-header span {
+    color: #777;
+    padding: 0;
+    width: 95%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    /* align for backend*/
+    text-align: left;
+}
+.menu .col-header > a,
+.menu .col-header > span {
+    font-weight: bold;
+    font-size: 1em;
+    padding: 4px 0;
+}
+
+/*Adds hover on column header if it has a link*/
+.menu .col-header > a:hover,
+.menu .col-header > span:hover {
+    background: #ccc;
+}
+.menu .col-header .container a:hover,
+.menu .col-header .container span:hover {
+    background: #ccc;
+}
+
+/*.menu > ul > li > ul > li > ul*/
+
+.menu .column .container {
+    display: block;
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.menu .normal-sub .column .container {
+    margin: 0;
+}
+
+/*.menu > ul > li > ul > li > ul:before,
+.menu > ul > li > ul > li > ul:after*/
+
+.menu .column .container:before,
+.menu .column .container:after {
+    content: "";
+    display: table;
+}
+
+/*.menu > ul > li > ul > li > ul:after*/
+
+.menu .column .container:after {
+    clear: both;
+}
+
+/*.menu > ul > li > ul > li > ul > li*/
+
+.menu .item {
+    float: left;
+    width: 100%;
+    padding: 2px 0;
+    margin: 0;
+    font-size: .8em;
+}
+
+/*.menu > ul > li > ul > li > ul > li a*/
+
+.menu .item a,
+.menu .item span {
+    border: 0;
+    font-size: 1.1em;
+}
+
+/*.menu > ul > li > ul.normal-sub*/
+
+.menu .dropdown.normal-sub {
+    width: 300px;
+    left: auto;
+    padding: 10px 20px 20px 20px;
+}
+
+/*.menu > ul > li > ul.normal-sub > li*/
+
+.menu .dropdown.normal-sub .column {
+    width: 100%;
+}
+
+/*.menu > ul > li > ul.normal-sub > li a*/
+
+.menu .dropdown.normal-sub .column a,
+.menu .dropdown.normal-sub .column span {
+    border: 0;
+    padding: 0;
+}
+.menu .dropdown.normal-sub .column > .col-header > a,
+.menu .dropdown.normal-sub .column > .col-header > span {
+    padding: .5em 0;
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Mobile style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media only screen and (max-width: 959px) {
+    .menu-container {
+        width: 100%;
+    }
+    .menu-mobile {
+        display: block;
+        text-decoration: none;
+    }
+    .menu-dropdown-icon:before {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+    }
+    /*.menu > ul*/
+    .menu .main {
+        display: none;
+    }
+    /*.menu > ul > li*/
+    .menu .top-link {
+        width: 100%;
+        float: none;
+        display: block;
+        position: relative;
+    }
+    /*.menu > ul > li a*/
+    .menu .top-link > a,
+    .menu .top-link > span {
+        padding: 0;
+        width: 100%;
+        display: block;
+        line-height: 70px;
+        text-indent: 20px;
+    }
+    /*.menu > ul > li > ul*/
+    .menu .dropdown {
+        position: relative;
+    }
+    /*.menu > ul > li > ul.normal-sub*/
+    .menu .dropdown.normal-sub {
+        width: 100%;
+    }
+    /*.menu > ul > li > ul > li*/
+    .menu .column {
+        float: none;
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    /*.menu > ul > li > ul > li:first-child*/
+    .menu .column:first-child {
+        margin: 0;
+    }
+    /*.menu > ul > li > ul > li > ul*/
+    .menu .column .container {
+        position: relative;
+    }
+    /*.menu > ul > li > ul > li > ul > li*/
+    .menu .item {
+        float: none;
+    }
+    .menu .show-on-mobile {
+        display: block;
+    }
+}

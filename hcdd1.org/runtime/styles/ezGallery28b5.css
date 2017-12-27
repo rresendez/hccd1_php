@@ -1,0 +1,638 @@
+
+.ezrotatorwrapper ul {
+    margin: 0;
+    padding: 0;
+}
+.ezrotatorwrapper {
+    color: #888;
+    margin: auto 0;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+.ezrotatorwrapper:after {
+    content: "";
+    clear: both;
+    visibility: hidden;
+    display: block;
+    height: 0;
+}
+.callbacks_container {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+.callbacks {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    font-size: 0px;
+    z-index: 1;
+}
+.actualsize {
+    -webkit-transition:none;
+    transition: none;
+    background: #333;
+}
+/*.callbacks li {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    vertical-align: middle;
+    max-height: inherit;
+    font-size: 0px;
+    height: 100%;
+    opacity: 0;
+    display: inline-block;
+    float: left;
+}*/
+
+.callbacks li {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    float: left;
+    max-height: inherit;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+/*Classes used for image size settings*/
+
+.callbacks li.actualsizeli {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    max-height: inherit;
+    font-size: 0px;
+}
+.callbacks li.actualsizeli .imageWrapper {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: inherit;
+}
+.callbacks img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    border: 0;
+}
+.callbacks img.actualsizeimg {
+    display: inline-block;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 0;
+    vertical-align: middle;
+    max-height: inherit;
+    font-size: 0px;
+}
+html:not(.t-ie) .callbacks img.actualsizeimg {
+    width: auto;
+    width: initial;
+}
+.callbacks li img.stretchfill {
+    width: initial;
+    width: auto;
+    height: auto;
+}
+.callbacks li img.wide {
+    height: 100%;
+    width: initial;
+    width: auto;
+}
+.callbacks li img.tall {
+    height: auto;
+    height: initial;
+    width: 100%;
+}
+.ezcarousel-centerwidth li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.ezcarousel-centerwidth li.callbacks_visible {
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+}
+.ezcarousel-centerwidth li.callbacks_visible:before {
+    z-index: 0;
+}
+.ezcarousel-center li.callbacks_visible {
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    z-index: 4;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+}
+.ezcarousel-center.ezcarousel-noeffect li.callbacks_visible {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    z-index: 4;
+}
+
+/* Caption settings */
+
+.callbacks .ezcaptionwrapper {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    font: 14px/20px "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background: #000;
+    background: rgba(0, 0, 0, .6);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    margin: 0;
+    max-width: none;
+    text-shadow: none;
+}
+.callbacks .ezcaption:empty {
+    padding: 0;
+}
+.callbacks .ezcaptionwrapper .ezcaptiontitle {
+    font-weight: bold;
+}
+
+/*Caption align */
+
+.callbacks p {
+    text-align: left;
+    margin: 0 auto 20px;
+}
+
+/* Nav buttons */
+
+.callbacks_nav {
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top: 50%;
+    top: calc(50% - 30px);
+    left: 0;
+    opacity: 0;
+    z-index: 3;
+    text-indent: 0;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 60px;
+    width: 38px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 -2px 1px rgba(0, 0, 0, .2);
+}
+.callbacks_nav:hover {
+    cursor: pointer;
+}
+.callbacks_container:hover .callbacks_nav {
+    opacity: .7;
+}
+.callbacks_nav:active {
+    opacity: 1.0;
+}
+.callbacks_nav.prev {
+    /*background: transparent url("../images/prev.png") no-repeat left top;*/
+}
+.callbacks_nav.next {
+    left: auto;
+    /*background: transparent url("../images/next.png") no-repeat right top;*/
+    right: 0;
+}
+
+/*Pager*/
+
+ul.callbacks_tabs {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 10px;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+}
+ul.callbacks_tabs.hascaption {
+    bottom: 50px;
+}
+ul.callbacks_tabs li {
+    display: inline-block;
+    vertical-align: middle;
+}
+ul.callbacks_tabs li:hover{
+    cursor: pointer;
+}
+ul.callbacks_tabs li .pager-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid #fff;
+    display: block;
+    margin: 0 3px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+}
+li.callbacks_here .pager-dot {
+    background: #fff !important;
+}
+ul.callbacks_tabs li .pager-dot.pager-active,
+ul.callbacks_tabs li .pager-dot:hover {
+    background: #fff;
+}
+/*Thumbnails*/
+
+ul.thumbnailcontainer {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    z-index: 999;
+    padding: 10px 0;
+    top: -10px;
+}
+ul.thumbnailswrapper {
+    white-space: nowrap;
+    text-align: left;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    position: relative;
+    left: 0;
+    overflow-y: visible;
+    background: #000;
+}
+.thumbnailsroller {
+    position: absolute;
+    height: 60px;
+    width: 30px;
+    top: 10px;
+    z-index: 4;
+    font-size: 25px;
+    text-shadow: 0 -2px 1px rgba(0, 0, 0, .4);
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 60px;
+    color: #ccc;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+.thumbnailsroller:hover {
+    cursor: pointer;
+}
+.thumbnailleft {
+    left: 0;
+    /*-webkit-transform: translateX(-100%);
+    transform: translateX(-100%);*/
+}
+.thumbnailright {
+    right: 0;
+    /*-webkit-transform: translateX(100%);
+    transform: translateX(100%);*/
+}
+ul.thumbnailcontainer:hover .thumbnailright,
+ul.thumbnailcontainer:hover .thumbnailleft {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+li.callbacks_thumbnails {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    -webkit-transition-timing-function: cubic-bezier(.5, 0, .1, 1);
+    transition-timing-function: cubic-bezier(.5, 0, .1, 1);
+    /*-webkit-transform: scale(1);
+          transform: scale(1);*/
+    position: absolute;
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+}
+li.callbacks_thumbnails:hover,
+li.callbacks_thumbnails.callbacks_here {
+    z-index: 2;
+    /*-webkit-transform: scale(1.1);
+          transform: scale(1.1);*/
+}
+li.callbacks_thumbnails:hover {
+    z-index: 3;
+}
+html.t-ie li.callbacks_thumbnails:after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+html.t-ie li.callbacks_thumbnails.callbacks_here:after,
+html.t-ie li.callbacks_thumbnails:hover:after {
+    z-index: -1;
+}
+li.callbacks_thumbnails.callbacks_here,
+li.callbacks_thumbnails:hover {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%);
+}
+li.callbacks_thumbnails:first-of-type {
+    margin-left: 0px;
+}
+li.callbacks_thumbnails:last-of-type {
+    margin-right: 0px;
+}
+li.callbacks_thumbnails:hover {
+    z-index: 3;
+    cursor: pointer;
+}
+li.callbacks_thumbnails span {
+    line-height: normal;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    position: relative;
+    z-index: 2
+}
+li.callbacks_thumbnails.callbacks_here span:before,
+li.callbacks_thumbnails:hover span:before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: 1px solid #fff;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+li.callbacks_thumbnails img {
+    width: auto;
+    margin: auto;
+    height: 60px;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+}
+
+/*Styles for slideshow delay*/
+
+.delay {
+    position: relative;
+}
+.delay .callbacks_container {
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+/*Icon Loader*/
+
+.loaderwrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    top: 0;
+    left: 0;
+}
+
+/*-----------Loader Icon Styles-----------*/
+.ezgallery .loaderwrapper{
+    display: none;
+}
+.ezloaderbkg {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+    margin-top: -35px;
+}
+html.t-ie9 .ezloaderbkg:before {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.ezloader {
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-indent: -9999em;
+}
+
+/*Loader animation used to prevent jump when loader appears*/
+
+@-webkit-keyframes loaddelay {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes loaddelay {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Support for browsers that don't have css animations*/
+
+html.no-cssanimations .ezloader,
+html.no-cssanimations .ezloader:before,
+html.no-cssanimations .ezloader:after {
+    -webkit-animation: none;
+    animation: none;
+    text-indent: 0px;
+    background: transparent;
+    content: "";
+}
+html.no-cssanimations .ezloader:before {
+    content: "Loading...";
+    font-size: 20px;
+}
+html.t-ie9 .ezCSSloader {
+    display: none;
+}
+.ezCSSloader {
+    border: 6px solid transparent;
+    -webkit-animation: spin .75s linear infinite;
+    animation: spin .75s linear infinite;
+    border-top: 6px solid #666;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*Loader Animation*/
+
+@-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0;
+        height: 20px;
+    }
+    40% {
+        box-shadow: 0 -2em;
+        height: 30px;
+    }
+}
+@keyframes load1 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 0;
+        height: 20px;
+    }
+    40% {
+        box-shadow: 0 -2em;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 700px) {
+    ul.callbacks_tabs {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .callbacks_nav {
+        top: 40%;
+        top: calc(50% - 30px);
+    }
+    /*#callbacks2{
+        max-width: 171px;
+    }*/
+    /* .callbacks .ezcaption {
+  display: none;
+    } */
+}
+
+/*CSS Animations*/
+.callbacks li.ezsVisible {
+    display: block;
+    float: left;
+    position: relative;
+    opacity: 1;
+    z-index: 2;
+}
+
+.callbacks li.ezsHidden {
+    display: block;
+    float: left;
+    z-index: 1;
+}
+
+
+/*Slide Top Animation*/
+
+.callbacks li.ezsHidden.ezslideTop {
+    transform: translateY(-100%);
+}
+
+.callbacks li.ezsVisible.ezslideTop {
+    transform: translateY(0%);
+}
+
+
+/*Slide Left Animation*/
+
+.callbacks li.ezsHidden.ezslideLeft {
+    transform: translateX(-100%);
+}
+
+.callbacks li.ezsVisible.ezslideLeft {
+    transform: translateX(0%);
+}
+
+/*.callbacks_nav {
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    top: 50%;
+    top: calc(50% - 30px);
+    left: 0;
+    opacity: 1;
+    z-index: 3;
+    text-indent: 0;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 60px;
+    width: 38px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: 0 -2px 1px rgba(0, 0, 0, .2);
+    height: 30px;
+    background: red;
+}*/

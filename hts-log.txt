@@ -1,0 +1,45 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 21 Dec 2017 10:52:06 at http://hcdd1.org/page/Our_Mission +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://hcdd1.org/page/Our_Mission -O1 "C:\httrak\hcdd1" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:52:09	Warning: 	Redirect for hcdd1.org/robots.txt
+10:52:09	Warning: 	File has moved from hcdd1.org/robots.txt to http://hcdd1.org/error/servererror404.htm
+10:52:55	Warning: 	Retry after error -4 (Connect Error) at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit (from hcdd1.org/page/Our_Mission)
+11:08:30	Warning: 	Retry after error -4 (Connect Error) at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit (from hcdd1.org/page/Our_Mission)
+11:19:10	Warning: 	Retry after error -4 (Incorrect length (5121533 Bytes, 5118113 expected)) at link hcdd1.org/page/open/729/0/Hidalgo County Brown Book.PDF (from hcdd1.org/page/Downloads)
+11:19:10	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/729/0/Hidalgo County Brown Book.PDF
+11:19:11	Warning: 	Retry after error -4 (Incorrect length (794845 Bytes, 899929 expected)) at link hcdd1.org/page/open/729/0/Insurance Requirements.pdf (from hcdd1.org/page/Downloads)
+11:19:19	Warning: 	Retry after error -4 (Incorrect length (822748 Bytes, 2570348 expected)) at link hcdd1.org/page/open/729/0/Bidder Vendor Application and W-09.pdf (from hcdd1.org/page/Downloads)
+11:19:20	Warning: 	Retry after error -4 (Incorrect length (2244570 Bytes, 3232407 expected)) at link hcdd1.org/page/open/1576/0/2016 HCDD1 Final Audit Report.pdf (from hcdd1.org/page/Reports_Financial)
+11:21:00	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/729/0/Insurance Requirements.pdf
+11:21:01	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1576/0/2016 HCDD1 Final Audit Report.pdf
+11:21:20	Warning: 	Retry after error -4 (Incorrect length (913882 Bytes, 3329365 expected)) at link hcdd1.org/page/open/1576/0/2015 HCDD1 Final Audit Report.pdf (from hcdd1.org/page/Reports_Financial)
+11:22:51	Warning: 	Retry after error -4 (Incorrect length (2051570 Bytes, 2048150 expected)) at link hcdd1.org/page/open/1574/0/2018 Proposed Drainage District Budget.pdf (from hcdd1.org/page/Reports_Budget)
+11:22:52	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1574/0/2018 Proposed Drainage District Budget.pdf
+11:23:20	Warning: 	Retry after error -4 (Incorrect length (3891182 Bytes, 3894266 expected)) at link hcdd1.org/page/open/1574/0/2016 Drainage District  Budget.pdf (from hcdd1.org/page/Reports_Budget)
+11:24:42	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1574/0/2016 Drainage District  Budget.pdf
+11:25:30	Error: 	"Connect Error" (-4) after 2 retries at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit (from hcdd1.org/page/Our_Mission)
+11:25:55	Warning: 	Retry after error -4 (Incorrect length (4434627 Bytes, 5118113 expected)) at link hcdd1.org/page/open/729/0/Hidalgo County Brown Book.PDF (from hcdd1.org/page/Downloads)
+11:25:55	Warning: 	Retry after error -2 (Receive Time Out) at link hcdd1.org/page/open/729/0/Bidder Vendor Application and W-09.pdf (from hcdd1.org/page/Downloads)
+11:26:33	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/729/0/Hidalgo County Brown Book.PDF
+11:28:27	Warning: 	Retry after error -4 (Incorrect length (3235827 Bytes, 3232407 expected)) at link hcdd1.org/page/open/1576/0/2016 HCDD1 Final Audit Report.pdf (from hcdd1.org/page/Reports_Financial)
+11:28:27	Warning: 	Retry after error -2 (Receive Time Out) at link hcdd1.org/page/open/1576/0/2015 HCDD1 Final Audit Report.pdf (from hcdd1.org/page/Reports_Financial)
+11:28:27	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1576/0/2015 HCDD1 Final Audit Report.pdf
+11:30:18	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1576/0/2016 HCDD1 Final Audit Report.pdf
+11:34:31	Warning: 	Retry after error -4 (Incorrect length (1188181 Bytes, 2048150 expected)) at link hcdd1.org/page/open/1574/0/2018 Proposed Drainage District Budget.pdf (from hcdd1.org/page/Reports_Budget)
+11:34:31	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1574/0/2018 Proposed Drainage District Budget.pdf
+11:36:27	Warning: 	Retry after error -4 (Incorrect length (3897686 Bytes, 3894266 expected)) at link hcdd1.org/page/open/1574/0/2016 Drainage District  Budget.pdf (from hcdd1.org/page/Reports_Budget)
+11:36:27	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): hcdd1.org/page/open/1574/0/2016 Drainage District  Budget.pdf
+11:39:29	Error: 	"Incorrect length (5121533 Bytes, 5118113 expected)" (-4) after 2 retries at link hcdd1.org/page/open/729/0/Hidalgo County Brown Book.PDF (from hcdd1.org/page/Downloads)
+11:39:29	Error: 	"Receive Time Out" (-2) after 2 retries at link hcdd1.org/page/open/729/0/Bidder Vendor Application and W-09.pdf (from hcdd1.org/page/Downloads)
+11:39:29	Error: 	"Incorrect length (3235827 Bytes, 3232407 expected)" (-4) after 2 retries at link hcdd1.org/page/open/1576/0/2016 HCDD1 Final Audit Report.pdf (from hcdd1.org/page/Reports_Financial)
+11:39:29	Error: 	"Incorrect length (3332785 Bytes, 3329365 expected)" (-4) after 2 retries at link hcdd1.org/page/open/1576/0/2015 HCDD1 Final Audit Report.pdf (from hcdd1.org/page/Reports_Financial)
+11:39:29	Error: 	"Incorrect length (794380 Bytes, 2048150 expected)" (-4) after 2 retries at link hcdd1.org/page/open/1574/0/2018 Proposed Drainage District Budget.pdf (from hcdd1.org/page/Reports_Budget)
+11:41:40	Error: 	"Incorrect length (3897686 Bytes, 3894266 expected)" (-4) after 2 retries at link hcdd1.org/page/open/1574/0/2016 Drainage District  Budget.pdf (from hcdd1.org/page/Reports_Budget)
+
+HTTrack Website Copier/3.49-2 mirror complete in 49 minutes 34 seconds : 304 links scanned, 281 files written (29441167 bytes overall) [70185422 bytes received at 23599 bytes/sec], 6251613 bytes transferred using HTTP compression in 130 files, ratio 31%
+(7 errors, 27 warnings, 0 messages)

@@ -1,0 +1,507 @@
+@import url("fancyfonts.css");
+@import url("fonts.css");
+@import url("colors.css");
+@import url("font-awesome.css");
+* {
+    margin: 0
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+form {
+    height: 100%
+}
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 150%;
+}
+
+/*------------------------------------------------------------------------Container Alignments--------------------------------------------------------------------------*/
+
+.gsc-control-cse {
+    background-color: transparent !important;
+    border: 0px !important;
+    padding: 0px !important;
+}
+.cse .gsc-control-cse:after,
+.gsc-control-cse:after {
+    content: "" !important
+}
+.innercontainer {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+.outercontainer {
+    width: 100%
+}
+.floatleft {
+    float: left
+}
+.floatright {
+    float: right
+}
+
+/*Like the clearfloat but you can used it as a class instead to keep the html clean*/
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*Removes default 1px border if needed*/
+
+
+/*Removes all top and bottom margin if needed*/
+
+.no-border,
+.no-border .widgetitem {
+    border: 0px !important
+}
+.no-margin,
+.no-margin .widgetitem {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+/*-------------------------------------------------------------------------------ADA Skip Navigation--------------------------------------------------------------------------*/
+
+#skip-navigation {
+    background: #bd0101;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+#skip-navigation:focus {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    z-index: 99999;
+}
+
+/*-------------------------------------------------------------------------------Top Navigation--------------------------------------------------------------------------*/
+
+#topnavwrapper {
+    margin-top: 20px;
+}
+#topnav {
+    position: relative;
+    z-index: 2;
+}
+#topnavin {
+    width: 96%;
+}
+#google_translate_element {
+    float: right;
+    border: 10px;
+}
+
+/*-------------------------------------------------------------------------------Header--------------------------------------------------------------------------*/
+
+#headerwrapper {}
+#header {
+    position: relative;
+    padding: 30px 0 20px 0;
+}
+#header .headerlogo {}
+#header .headerlogo img {
+    height: auto;
+    max-width: 100%;
+}
+#headerin {
+    width: 96%;
+}
+#header .header_manager {
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+    width: auto;
+}
+
+/*-------------------------------------------------------------------------------Menu--------------------------------------------------------------------------*/
+
+#menu {
+    position: relative;
+}
+#menuin {
+    float: right
+}
+
+/*Removes border on mobile menu*/
+
+.rmRootToggle {
+    border: 0px !important;
+    box-shadow: 0px !important;
+}
+
+/*-----------------------------------------------------------------------------Content--------------------------------------------------------------------------*/
+
+#contentwrapper {
+    position: relative;
+    z-index: 3;
+}
+#contentwrapper {
+    min-height: 100px
+}
+#contentwrapper .eztext_area img {
+    max-width: 100%;
+}
+#contentwrapperin {
+    min-height: 600px;
+    padding: 0 0 40px 0;
+}
+#maincontent {
+    width: 94%;
+    padding: 25px 0;
+}
+
+/*---------------------------------------------------------------Homepage Templates------------------------------------------------*/
+
+#contentleft_hp {
+    min-height: 50px;
+    width: 25.8%;
+}
+#contentleftin_hp {
+    margin: 0 auto 0 0;
+    min-height: 50px;
+    padding: 0px 0 20px 0;
+    width: 95%;
+}
+#contentmiddle_hp {
+    min-height: 50px;
+    width: 50.2%;
+}
+#contentmiddlein_hp {
+    margin: 0 auto;
+    min-height: 50px;
+    padding: 20px 0;
+    width: 92%;
+}
+#contentright_hp {
+    border-radius: 2px;
+    margin: 0 auto;
+    min-height: 100px;
+    width: 24%;
+}
+#contentrightin_hp {
+    margin: 0 0 0 auto;
+    min-height: 50px;
+    padding: 0px 0 20px 0;
+    width: 92%;
+}
+
+/*---------------------------------------------------------------Secondary Templates------------------------------------------------*/
+
+#contentleft {
+    min-height: 50px;
+    width: 26%;
+}
+#contentleftin {
+    margin: 0 auto 0 0;
+    min-height: 50px;
+    padding-bottom: 20px;
+    width: 89%;
+}
+#contentright {
+    border-radius: 2px;
+    margin: 0 auto;
+    min-height: 100px;
+    width: 72%;
+}
+#contentrightin {
+    min-height: 50px;
+    padding: 15px 0 20px 0;
+    width: 94%;
+}
+
+/*---------------------------------------------------------------Three Column Templates------------------------------------------------*/
+
+.threecol #contentleftin {
+    width: 100%;
+    padding: 10px 0;
+}
+.threecol #contentmiddle {
+    width: 49%;
+}
+.threecol #contentmiddlein {
+    width: 94%;
+    padding: 10px 0;
+}
+.threecol #contentright {
+    width: 24%;
+}
+.threecol #contentrightin {
+    width: 100%;
+    padding: 10px 0;
+}
+
+/*--------------------------------------------------------------------------------Footer-----------------------------------------------------------------------------*/
+
+#footerwrapper {
+    min-height: 50px
+}
+#footer {
+    min-height: 50px;
+    padding: 40px 0px 10px 0px;
+}
+#footer .footerlogo {
+    position: relative;
+    top: -25px;
+}
+#ezfooterin {
+    width: 96%;
+}
+#footer-maps {
+    text-align: center;
+}
+#footer-maps iframe {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/*---------------------------------------------------------------------------------ezTag-----------------------------------------------------------------------------*/
+
+#eztagwrapper {
+    min-height: 10px;
+}
+#eztagin {
+    width: 70%;
+}
+#eztaginner {
+    width: 96%;
+}
+#poweredby {
+    width: 30%;
+}
+
+/*--------------------------------------------------------------------------------Searchbox-----------------------------------------------------------------------------*/
+
+#topnav #searchbox {
+    float: right;
+    height: 30px;
+    max-width: 200px;
+    position: absolute;
+    width: 100%;
+    top: 11px;
+    right: 10px;
+}
+#topnav #searchbox .input-wrapper {
+    height: inherit;
+    margin: 0 0 0 auto;
+    width: 100%;
+}
+#topnav #searchbox .input-wrapper button {
+    border: 0;
+    cursor: pointer;
+    height: 100%;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 13%;
+}
+#topnav #searchbox .input-wrapper button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+#topnav #searchbox .input-wrapper input {
+    font-family: "pt_sansregular", Arial, Helvetica, sans-serif;
+    height: 100%;
+    left: 0;
+    padding: 0 4px;
+    position: absolute;
+    top: 0;
+    width: 80%;
+    font-size: 15px;
+}
+#topnav #searchbox .input-wrapper input:focus {
+    outline: 0
+}
+#topnav #searchbox .cf {
+    zoom: 1
+}
+#topnav #searchbox .cf:before,
+.cf:after {
+    content: "";
+    display: table;
+}
+#topnav #searchbox .cf:after {
+    clear: both
+}
+#topnav .topnav {
+    position: relative;
+    z-index: 5;
+}
+
+/*-----------------------------------------------------------------------------------Tablets-----------------------------------------------------------------------------*/
+
+@media screen and (max-width:1160px) {
+    body {
+        overflow-x: hidden
+    }
+    #footer img {
+        max-width: 100%
+    }
+    #topnav #searchbox{
+        position: relative;
+        top: 4px;
+    }
+    #footer .footer-maps,
+    #footer #footer-maps {
+        height: 0;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-bottom: 38%;
+        position: relative;
+    }
+    #menu .mainmenu {
+        width: 96%;
+        float: none;
+        margin: 0 auto;
+    }
+    #topnavwrapper {
+        margin: 0px;
+    }
+    #topnav,
+    #footer,
+    #eztag {
+        width: 100%;
+    }
+}
+@media screen and (max-width:900px) {
+    #contentleft_hp,
+    #contentmiddle_hp,
+    #contentright_hp,#contentrightin_hp {
+        width: 100%
+    }
+}
+
+/*------------------------------------------------------------------------------------Mobile-----------------------------------------------------------------------------*/
+
+@media screen and (max-width:700px) {
+    body {
+        overflow-x: hidden;
+    }
+    .innercontainer {
+        margin: 0 auto !important
+    }
+    #topnav p,
+    #header .imagesizeitLeft {
+        text-align: center !important
+    }
+    #headerwrapper {
+        background-image: none;
+    }
+    #header {
+        padding: 10px 0 25px 0;
+        background-size: cover;
+    }
+    #header .headerlogo {
+        position: relative;
+        top: 30px;
+    }
+    #header .header_manager {
+        position: relative;
+        right: 0px;
+        bottom: 0px;
+        top: 15px;
+    }
+    #header .header_manager .eztext_area {
+        font-size: 16px;
+    }
+    #google_translate_element {
+        float: none;
+        text-align: center;
+    }
+    #topnav #searchbox {
+        float: none;
+        margin: 0 auto;
+        margin: 10px auto 10px auto;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+    #contentwrapperin {
+        background: #fff;
+        padding: 0;
+        width: 100%;
+    }
+    #contentleftin_hp,
+    #contentmiddlein_hp,
+    #contentrightin_hp {
+        width: 100%
+    }
+    #contentleft,
+    #contentright {
+        float: left;
+        margin: 0 1%;
+        min-height: 10px;
+        padding: 0;
+        width: 98%;
+    }
+    #contentleftin,
+    #contentrightin {
+        float: left;
+        min-height: 10px;
+        padding: 1.5%;
+        width: 95%;
+    }
+    #footer .ezlayout2Col1 p {
+        right: 0 !important;
+        text-align: center !important;
+    }
+    #footer .ezlayout3Col1,
+    #footer .ezlayout3Col2,
+    #footer .ezlayout3Col3 {
+        width: 33% !important;
+    }
+    #footer .widgetitem img {
+        display: block;
+        margin: 0 auto;
+    }
+    #footer .footer-maps {
+        text-align: center;
+    }
+    #eztag {
+        line-height: 24px
+    }
+    #header .eztext_area p,
+    #eztag p {
+        text-align: center !important
+    }
+    #contentwrapper .btn1 {
+        width: 93%
+    }
+    #contentwrapper .btn2 {
+        width: 93%
+    }
+    #contentwrapper .btn3 {
+        width: 87%
+    }
+    #contentwrapper .btn4 {
+        width: 93%
+    }
+    #contentwrapper .headline {
+        width: 97%
+    }
+    #poweredby,
+    #eztagin {
+        width: 100%;
+    }
+}

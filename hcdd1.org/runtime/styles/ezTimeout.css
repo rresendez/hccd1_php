@@ -1,0 +1,144 @@
+.ez-dialog-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(0, 0, 0, .1);
+    display: none;
+    top: 0;
+    left: 0;
+}
+.ez-dialog {
+    background: #fff;
+    position: relative;
+    border-radius: 3px;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #333333;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99999;
+}
+.ez-dialog-titlebar {
+    background: #e9e9e9;
+    padding: 10px 15px;
+    border: 1px solid #dddddd;
+    margin-bottom: 10px;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    position: relative;
+    font-weight: 500;
+}
+.ez-dialog-titlebar-close {
+    position: absolute;
+    right: 10px;
+    background-color: #f6f6f6;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    top: 10px;
+    background-image: url("../images/ezTimeoutExit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ez-dialog-titlebar-close:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+.ez-dialog #expirealert {
+    padding: 0 15px;
+    font-size: 15px;
+}
+.ez-dialog #expirealert .table {
+    display: table;
+}
+.ez-dialog #expirealert .tr {
+    display: table-row;
+    vertical-align: top;
+}
+.ez-dialog #expirealert .td {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: 2px;
+}
+.ez-dialog #expirealert .fa {
+    color: #666;
+    font-size: 40px;
+}
+.ez-dialog-timer {
+    text-align: center;
+    padding: 5px;
+    background: #666;
+    color: #fff;
+    width: 60%;
+    margin: 15px auto 15px auto;
+}
+.ez-dialog-buttonpane {
+    padding: 15px 20px 20px 20px;
+    text-align: center;
+}
+.ez-dialog-buttonpane .ez-dialog-button {
+    background: #f6f6f6;
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 0 3px;
+    font-size: 15px;
+}
+.ez-dialog-buttonpane .ez-dialog-button:hover {
+    background: #dddddd;
+    cursor: pointer;
+}
+
+
+/*ezSecureLogout*/
+
+#ezSecureLogout {
+  font-family: "Segoe UI", arial;
+  font-size: 14px;
+  background: #ccc;
+  display: inline-block;
+  position:fixed;
+  right:0; 
+  z-index:9999;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 10px 10px;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, .5)
+}
+
+#ezSecureLogout span {
+  margin: 0 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#ezSecureLogout .fa {
+  color: #fff;
+  font-size: 16px;
+}
+
+#ezSecureLogout .ezLogin-user {
+  color: #666;
+  margin-left:-2px;
+}
+
+#ezSecureLogout .ezLogin-logout button {
+  font-family: "Segoe UI", arial;
+  font-size: 12px;
+  background: #fcfcfc;
+  border: 0px;
+  color: #666;
+  padding: 1px 10px;
+  border-radius: 2px;
+}
+
+#ezSecureLogout .ezLogin-logout button:hover {
+  background: #666;
+  color:white;
+  cursor:pointer;
+}

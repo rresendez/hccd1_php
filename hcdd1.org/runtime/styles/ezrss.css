@@ -1,0 +1,108 @@
+@import url(fancyfonts.css);
+
+.ezrssfeed {
+	font-family: arial,tahoma,san-serif;
+	text-align:left;
+	margin:0;
+}
+
+.ezrssfeed .ezpubdate {
+	display:none;
+}
+
+.ezrssfeed .ezitem	{
+	margin-bottom: 15px;
+	float:left;
+	width:100%;
+}
+
+.ezrssfeed .ezimage	{
+	background-color:#333;
+	position:relative;
+	overflow:hidden;
+	float:left;
+	margin-right: 10px;
+}
+
+.ezrssfeed .ezimage a img	{
+	width:100%;
+	height:auto;
+	position: absolute;
+	top: -9999px;
+	bottom: -9999px;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+
+	/*set scale initial*/
+	-webkit-transform: scale(1.2); /* Saf3.1+, Chrome */
+	-moz-transform: scale(1.2); /* FF3.5+ */
+	-ms-transform: scale(1.2); /* IE9 */
+	-o-transform: scale(1.2); /* Opera 10.5+ */
+	transform: scale(1.2);
+	/* IE6�IE9 */
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+
+	/* set transition speed */
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.ezrssfeed .ezimage a img:hover	{
+	/*set scale hover */
+	-webkit-transform: scale(1.4); /* Saf3.1+, Chrome */
+	-moz-transform: scale(1.4); /* FF3.5+ */
+	-ms-transform: scale(1.4); /* IE9 */
+	-o-transform: scale(1.4); /* Opera 10.5+ */
+	transform: scale(1.4);
+	/* IE6�IE9 */
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935,M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+}
+
+.ezrssfeed .eztitle	{
+	padding-bottom: 5px;
+}
+
+.ezrssfeed .eztitle a 	{
+	font-family: 'pt_sansbold',sans-serif;
+	font-size: 18px;
+	line-height: 1em;
+	font-weight:normal;
+	color: #840C24;
+	text-decoration: none;
+}
+
+.ezrssfeed .eztitle a:hover {
+	text-decoration: underline;
+}
+
+.ezrssfeed .eztitlelink {
+}
+
+.ezrssfeed .ezdescription {
+	font-family: "pt_sansregular",sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #243242;
+	text-decoration: none;
+	line-height: 1.5em;
+}
+
+.ezrssfeed .ezmorelink {
+	font-family: "pt_sansregular",sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #840C24;
+	text-decoration: underline;
+	display: block;
+}
+
+.ezrssfeed .ezmorelink:hover {
+	text-decoration: none;
+}
+
+.ezrssfeed .ezrsserror {
+}

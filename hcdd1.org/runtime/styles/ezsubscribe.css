@@ -1,0 +1,205 @@
+@import url(fancyfonts.css);
+.popalign {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table;
+    z-index: 9999;
+}
+.popwrapper {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+.popwrapper .btn {
+    display: inline-block;
+    position: relative;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+    cursor: pointer;
+    z-index: 999;
+    height: 125px;
+    width: 30px;
+    background: #BD0101;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    -webkit-transition-property: background, border-radius, transform;
+    transition-property: background, border-radius, transform;
+    -webkit-transition-duration: .20s, .20s, .20s;
+            transition-duration: .20s, .20s, .20s;
+    -webkit-transition-timing-function: linear, ease-in, ease-in-out;
+            transition-timing-function: linear, ease-in, ease-in-out;
+}
+.popwrapper .btn:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
+    background-color: #006d00;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    filter: alpha(opacity=70);
+}
+.popwrapper .btn.active {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+.popwrapper .btn .btn-title {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: left top 0;
+            transform-origin: left top 0;
+
+/*IE 10+ rotate text*/
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform: rotate(90deg);
+/* IE9 rotate text*/
+    -ms-transform: rotate(90deg);
+    -ms-transform-origin: 0% 0%;
+
+    position: absolute;
+    top: 21px;
+    font-size: 20px;
+    left: 27px;
+}
+
+.popwrapper .titlemessage {
+    font: 15px/1.2 'Segoe UI', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    color: #666;
+    margin: 0;
+    padding-bottom: 15px;
+}
+.popwrapper .panel {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    width: 305px;
+    text-align: left;
+    overflow: hidden;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+    opacity: 0;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+html.t-ie .popwrapper .panel{
+    bottom:150%;
+}
+.popwrapper .panel.active {
+    height: auto;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+    transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+}
+.popwrapper .panel-header {
+    padding: 20px 25px;
+    font-size: 12px;
+    background-color: #fff;
+    color: #666;
+}
+.popwrapper .panel-body {
+    padding: 5px 0 5px 25px;
+    background-color: #fff;
+    font-size: 11px;
+    color: #aaa;
+}
+.popwrapper .panel-body a:after {
+    position: relative;
+    z-index: 1;
+    height: 10px;
+    width: 1%;
+    left: -4%;
+    top: -25px;
+    margin: 0 0 0 53.5%;
+    display: block;
+    content: "";
+    background: #000;
+    -o-box-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 7px #000, 0 0 12px #000;
+    -ms-box-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 7px #000, 0 0 12px #000;
+    box-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 7px #000, 0 0 12px #000;
+    /* Transform: rotateX to create depth, scale to 10x to make left/right more blurry than top/bottom; */
+    -webkit-transform: rotateX(45deg) scale(10, .75);
+    transform: rotateX(45deg) scale(10, .75);
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/* ------------ form ----------- */
+
+.ezname,
+.ezmail {
+    font: 14px/1.2 'Segoe UI', sans-serif;
+}
+.ezmail {
+    padding-top: 5px;
+}
+.eznamein,
+.ezmailin {
+    height: 20px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 250px;
+    color: #666;
+}
+.buttonwrapper {
+    color: #ebebeb;
+    font-size: 12px;
+    letter-spacing: .1px;
+    vertical-align: middle;
+    margin-bottom:8px;
+}
+.loginbutton {
+    cursor: pointer;
+    font-family: 'MyriadProCondensed', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    padding: 6px 10px;
+    border: 0;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #bd0101;
+    -webkit-transition-property: background, border-radius;
+    transition-property: background, border-radius;
+    -webkit-transition-duration: .20s, .20s;
+            transition-duration: .20s, .20s;
+    -webkit-transition-timing-function: linear, ease-in;
+            transition-timing-function: linear, ease-in;
+}
+.loginbutton:hover,
+.cancelbutton:hover {
+    border-radius: 5px;
+    background-color: #006d00;
+}
+
+.errormsg {
+    margin: 10px 25px 0 0;
+}
+.errormsg .errortxt {  		
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align:left;
+    color: #bd0101;
+}
+.viewsub {display:none;}

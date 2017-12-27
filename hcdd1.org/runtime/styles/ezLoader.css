@@ -1,0 +1,173 @@
+/*-----------Wrapper for the iframe loader-----------*/
+
+#ez-iframe--loader {
+    position: relative;
+    width: 100%;
+    top: -40px;
+}
+.iframewrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.ezloaderwrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    text-align: center;
+    -webkit-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    -webkit-animation: 1s ease loaddelay;
+            animation: 1s ease loaddelay;
+}
+
+/*-----------Classes used for showing and hiding the various elements------------*/
+.movetop{
+  top: -40px;
+}
+.no-top {
+    top: 0px !important;
+}
+.delay {
+    position: relative;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 1;
+}
+.delay> iframe {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 0;
+}
+.finished--load{
+    height: auto !important;
+}
+/*Added to iFrame when it is finished loading*/
+
+.loaded {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+/*Added to the loaderwrapper to remove the loader when the iframe has finished loading*/
+
+.remove--loader {
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    z-index: -1 !important;
+}
+/*Stops the animation after the loader is done*/
+/*.remove--loader .ezCSSloader{
+    -webkit-animation: none;
+            animation: none;
+}*/
+/*-----------Loader Icon Styles-----------*/
+
+.ezloaderbkg {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+    margin-top: -35px;
+}
+html.t-ie9 .ezloaderbkg:before{
+  content: "Loading...";
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.ezloader {
+    margin: 0 auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-indent: -9999em;
+}
+#divhourglass{
+    width: 100%;
+    height: 100%;
+}
+/*Loader animation used to prevent jump when loader appears*/
+
+@-webkit-keyframes loaddelay {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loaddelay {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Support for browsers that don't have css animations*/
+
+html.no-cssanimations .ezloader,
+html.no-cssanimations .ezloader:before,
+html.no-cssanimations .ezloader:after {
+    -webkit-animation: none;
+    animation: none;
+    text-indent: 0px;
+    background: transparent;
+    content: "";
+}
+html.no-cssanimations .ezloader:before {
+    content: "Loading...";
+    font-size: 20px;
+}
+html.t-ie9 .ezCSSloader{
+  display: none;
+}
+.ezCSSloader {
+    border: 6px solid transparent;
+    -webkit-animation: spin .75s linear infinite;
+    animation: spin .75s linear infinite;
+    border-top: 6px solid #666;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+@keyframes spin{
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}

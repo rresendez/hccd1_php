@@ -1,0 +1,50 @@
+@import url(font-awesome.css);
+/* radlightbox Calendar details popup -- do not remove*/
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbNextButton {display:none !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbPrevButton {display:none !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbMaximizeButton {display: none !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbMaximizeIcon span {display: none !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbPager {display: none !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbWrapper {overflow-y: auto !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.rltbItemBox {padding:0 10px 10px 10px !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.eventheader {margin-bottom: 10px; line-height: 15px; font-family:"Segoe UI"; color: #333; font-size: 17px; text-align: center;letter-spacing:-1px;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	p  {font-family: "Segoe UI", Arial, Helvetica, sans-serif;color: #666; font-size: 11px !important;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.description {color: #333;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.description a {color:#333;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox	.description a:hover {text-decoration:none;}
+#ctl00_ContentPlaceHolder1_CalendarLightBox 	
+hr.styleon {
+    margin: 10px 0px 10px 0px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+/* calendar styling if Metro*/
+.RadScheduler_Metro .rsHeader {background-color: #c4c4c4 !important; border: 1px solid #c4c4c4 !important;}
+.RadScheduler_Metro .rsHeader ul a {border:1px solid #fff !important;}
+.RadScheduler_Metro .rsHeader ul .rsSelected em {background-color: #999 !important; border:1px solid #999 !important;}
+
+/*Calendar styling if Silk*/
+.RadScheduler_Silk .rsHeader {background-image:none !important; background-color: #fff !important;}
+
+/*capitalize date letters*/
+.RadScheduler_Metro .rsHeader h2 {text-transform: capitalize !important;}
+
+/* day background */
+.RadScheduler_Silk .rsHorizontalHeaderTable th{background-image:none !important;}
+/*othermonth background*/
+.RadScheduler_Metro .rsMonthView .rsOtherMonth {background-color: #f5f5f5 !important;}
+/* todaycolor */
+.rsMonthView .rsTodayCell {background-color: #FAFFBD !important; color: #000; border:0 !important;}
+/*export / pdf buttons */
+.RadButton_Metro.rbSkinnedButton, .RadButton_Metro.rbVerticalButton {border: 1px solid #fafafa !important;}
+
+
+
+
+

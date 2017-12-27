@@ -1,0 +1,98 @@
+.sm_wrapper {
+	font-family: "Segoe UI", geneva, arial, helvetica, san-serif;
+	width: 100%;
+}
+
+.smcol1 {
+width: 100%;
+}
+	.smcol1_2 {
+	float: left;
+	width: 50%;
+	}
+	.smcol1_3 {
+	float: left;
+	width: 33%;
+	}
+	.smcol1_4 {
+	float: left;
+	width: 25%;
+	}
+	.smcol1_5 {
+	float: left;
+	width: 20%;
+	}
+.smcol2_2 {
+float: left;
+width: 50%;
+}
+	.smcol2_3 {
+	float: left;
+	width: 33%;
+	}
+	.smcol2_4 {
+	float: left;
+	width: 25%;
+	}
+	.smcol2_5 {
+	float: left;
+	width: 20%;
+	}
+.smcol3_3 {
+ float: left;
+ width: 33%;
+}
+	.smcol3_4 {
+	float: left;
+	width: 25%;
+	}
+	.smcol3_5 {
+	float: left;
+	width: 20%;
+	}
+.smcol4_4 {
+float: left;
+width: 25%;
+}
+	.smcol4_5 {
+	float: left;
+	width: 20%;
+	}
+.smcol5_5 {
+float: left;
+width: 20%;
+}
+
+.smsec_break {margin-top:10px;}
+
+.smsec_head{
+	font-size: 16px;
+	color: #333;
+}
+
+.smsec_txt{
+	background-image:url('../images/caldot.gif');
+	background-position:0px 10px;
+	background-repeat:no-repeat;
+	font-size: 14px;
+	color: #333;
+	padding-top: 2px;
+	padding-left:11px;
+}
+
+.smsec_tlink{
+	color: #333;
+	text-decoration: none;
+}
+.smsec_tlink:visited{
+	color: #333;
+	text-decoration: none;
+}
+.smsec_tlink:hover{
+	background-color:#ebebeb;
+}
+
+/*breadCrumb navigation style*/
+.rsmItem {font-size: 14px !important;}
+.rsmLink {font-size: 14px !important;text-decoration:underline !important;}
+.rsmLink:hover {text-decoration:none !important;background-color:#fff !important;}

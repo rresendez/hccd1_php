@@ -1,0 +1,304 @@
+/* remove random vertical line after new DLL 2_2016 */
+
+.rmVertical:before {
+    border-width: 0 !important;
+}
+
+/* Adds responsiveness(line break) to horizontal menus*/
+
+ul.rmHorizontal {
+    white-space: normal;
+}
+ul.rmHorizontal .rmSlide,
+ul.rmHorizontal .rmLink {
+    white-space: nowrap !important;
+    width: auto !important;
+    width: initial !important;
+}
+ul li a,
+ul li span {
+    text-decoration: none;
+}
+#contentwrapper .RadMenu .rmRootToggle,
+.RadMenu_ezSilk .rmVertical .rmItem .rmText,
+.RadMenu_ezSilk .rmGroup .rmLink:hover,
+#menu .RadMenu .rmRootToggle,
+.RadMenu_ezSilk .rmGroup .rmLink,
+.RadMenu_ezSilk .rmVertical .rmItem .rmText,
+.RadMenu_ezSilk .rmVertical .rmItem .rmText:hover,
+{
+    border: 0px !important;
+}
+.RadMenu_ezSilk .rmRootGroup .rmItem,
+.RadMenu_ezSilk .rmRootGroup {
+    border-style: none !important;
+}
+.RadMenu_ezSilk .rmRootLink .rmText,
+.RadMenu_ezSilk .rmSeparator .rmText,
+.RadMenu_ezSilk .rmRootGroup,
+.RadMenu_ezSilk .rmGroup {
+    padding: 0!important
+}
+.RadMenu_ezSilk .rmRootGroup .rmItem,
+.RadMenu_ezSilk .rmGroup,
+.RadMenu_ezSilk .rmGroup .rmItem {
+    margin: 0;
+}
+.RadMenu_ezSilk {
+    font-family: 'oswaldlight', sans-serif;
+    border-style: hidden !important;
+}
+.RadMenu_ezSilk:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.RadMenu_ezSilk .rmRootGroup {
+    line-height: 24px;
+}
+
+/* added remove LT borders */
+
+.RadMenu_ezSilk .rmGroup {
+    border: 0px solid #307AB7;
+    border: none !important;
+}
+
+/* LT dropdown text */
+
+.RadMenu_ezSilk .rmGroup span.rmLink,
+.RadMenu_ezSilk .rmGroup a.rmLink {
+    padding: 0 2em 0 1em !important;
+}
+
+/* dropdown - added for line-height on dropdown items in the Editor */
+
+.RadMenu_ezSilk .rmVertical .rmItem .rmText {
+    display: block;
+    line-height: normal;
+    /*padding: 5px 10px;----styled with LT*/
+    font-size: 18px;
+    line-height: 32px;
+    /*LT dropdown */
+    white-space: nowrap;
+}
+.RadMenu_ezSilk .rmRootGroup .rmFirst {
+    margin-left: 0
+}
+
+.RadMenu_ezSilk .rmGroup .rmLeftImage {
+    margin-top: 10px!important
+}
+
+/* background of dropdown move for tabstrip issue  */
+
+.RadMenu_ezSilk .rmGroup {
+    background-color: #ffffff;
+}
+
+/* moved from here for tabstrip issue */
+
+.RadMenu_ezSilk .rmGroup .rmLink {
+    width: auto;
+    color: #000;
+    line-height: 32px;
+    /*LT dropdown */
+    font-size: 18px;
+    /*LT font size */
+}
+
+/*----------------------Styles for the menus within the Editor---------------*/
+
+.RadMenu_ezSilk .rmSeparator {
+    overflow: hidden
+}
+.RadMenu_ezSilk .rmSeparator .rmText {
+    margin: 0!important;
+}
+.RadMenu_ezSilk .rmRootGroup .rmSeparator .rmText {
+    background-color: #fff
+}
+.RadMenu_ezSilk .rmGroup .rmSeparator .rmText {
+    background-color: #fff;
+}
+.RadMenu_ezSilk .rmHorizontal .rmSeparator {
+    padding: 8px 0!important;
+    width: 1px!important;
+    height: 16px!important
+}
+.RadMenu_ezSilk .rmHorizontal .rmSeparator .rmText {
+    /* width:1px!important; */
+    /* height:18px!important */
+}
+.RadMenu_ezSilk .rmVertical .rmSeparator {
+    padding: 1px 10px!important;
+    width: auto!important;
+    height: 1px!important
+}
+.RadMenu_ezSilk .rmVertical .rmSeparator .rmText {
+    width: auto!important;
+    height: 1px!important
+}
+#contentwrapper .RadMenu .rmGroup .rmText {
+    padding: 0;
+    margin: 0;
+}
+#contentwrapper .RadMenu_ezSilk .rmVertical .rmItem .rmText {
+    display: block;
+    /*padding: 5px 10px;----styled with LT*/
+    white-space: normal;
+    text-align: left;
+    box-shadow: none;
+    font-size: 20px;
+}
+#contentwrapper .RadMenu_ezSilk .rmVertical .rmText {}
+
+/* -------------------- Vertical District menu on left side ------------------ */
+
+#contentwrapper .RadMenu_ezSilk {
+    font-size: 20px;
+}
+#contentwrapper .RadMenu_ezSilk a {
+    font-size: 20px;
+}
+/*-------------------padding set to zero out flyout ---*/
+
+#contentwrapper .RadMenu_ezSilk .rmRootGroup.rmVertical>.rmItem {
+    border-left-width: 0;
+    border-right-width: 0;
+    padding: 7px 0;
+}
+#contentwrapper .RadMenu_ezSilk,
+#contentwrapper .RadMenu_ezSilk a.rmLink {
+    text-decoration: none;
+}
+#contentwrapper .RadMenu_ezSilk .rmVertical.rmToggleHandles .rmRootLink .rmText {
+    padding-right: 35px;
+}
+
+/* ---------------------------hover on root */
+
+
+/* ---------------------------menu background */
+
+#contentwrapper .RadMenu_ezSilk .rmRootGroup .rmVertical {
+    /* background-color:#ECE8E0; ----specified as background for all in rmRootGroup*/
+}
+
+/*--------------------------- hover on Root */
+
+
+/*  -------------flyout background and shadow-- */
+
+#contentwrapper .RadMenu_ezSilk .rmGroup,
+#contentwrapper .RadMenu_ezSilk .rmPopup {
+    box-shadow: 0 3px 3px rgba(122, 122, 122, 0.7);
+    border: none;
+}
+
+/*  -------------padding flyout on front and back-- */
+
+#contentwrapper .RadMenu_ezSilk .rmGroup span.rmLink,
+#contentwrapper .RadMenu_ezSilk .rmGroup a.rmLink {
+    white-space: nowrap;
+}
+
+/* ------------------flyout foreground-- */
+
+
+/* -----------------Mobile ----------------*/
+
+
+/* button */
+html .RadMenu .rmRootToggle:before {
+    content: "\f20e";
+    font-family: "Ionicons";
+    font-size: 60px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+#contentwrapper .RadMenu .rmRootToggle {
+    background-color: transparent;
+    color: #2f2f2f;
+    box-shadow: 0 0 0 0 rgba(254, 254, 254, 0.36) inset !important;
+    font-size: 2em !important;
+    width: 100%;
+    text-align: left;
+}
+
+#menu .RadMenu .rmRootToggle {
+    background-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(254, 254, 254, 0.36) inset !important;
+    font-size: 2em !important;
+    width: 100%;
+}
+#contentwrapper .RadMenu .rmRootToggle::before,
+#menu .RadMenu .rmRootToggle::before {
+}
+#contentwrapper .RadMenu .rmRootToggle::after {
+    content: "Select a Quicklink Here";
+    font-family: "ralewayregular",sans-serif;
+    color: #2f2f2f;
+    font-size: 20px;
+    line-height: 50px;
+    font-weight: 100;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+
+}
+#menu .RadMenu .rmRootToggle::after {
+    content: "Main Menu";
+    color: #fff;
+    font-size: 20px;
+    line-height: 55px;
+    font-weight: 100;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* popup width */
+
+.RadMenuPopup {
+    width: 85% !important;
+}
+
+/* touch entire bar */
+
+.RadMenuPopup .rmToggle {
+    width: 100% !important;
+    text-align: right !important;
+}
+
+/* background popup */
+
+.RadMenuPopup .rmSlide {
+    background-color: rgba(51, 51, 51, 0.90);
+    color: #fff;
+    max-height: 415px !important;
+}
+
+/* arrow on top */
+
+.RadMenuPopup:after {
+    content: "";
+    border-color: rgba(51, 51, 51, 0.90);
+    border-width: .571em;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-style: solid;
+    border-top: 0;
+    display: block;
+    position: absolute;
+}
+
+/* hide block behind arrow on top */
+
+.RadMenuPopup:before {
+    border-color: transparent !important;
+}
+/

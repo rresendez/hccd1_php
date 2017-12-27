@@ -1,0 +1,226 @@
+
+
+/*new feed styles */
+
+/*ezRSS Custom Style Test*/
+.ezrssfeed{
+    font-family: inherit;
+}
+.ezrss-wrapper{
+    margin: 0 auto;
+    width: 100%;
+    font-family: inherit;
+}
+.ezrss-container{
+    width: 100%;
+    text-align: center;
+}
+.ezrss-item {
+    width: 20%;
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+.ezrss-item:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top:0;
+    right: 0;
+    border-right: 1px dotted #000;
+}
+.ezrss-item:last-of-type:before{
+    display: none;
+}
+.ezrss-item-inner {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.ezrss-item-inner:after {
+    content: "";
+    clear: both;
+    visibility: hidden;
+    display: block;
+    height: 0;
+}
+.ezrss-header {
+    float: left;
+    width: 100%;
+    padding-bottom: 15px;
+}
+.ezrss-event-container {
+    width: 100%;
+    float: left;
+}
+.ezrss-event {
+    padding-bottom: 15px;
+    float: left;
+}
+.ezrss-datemonth {
+    width: 70%;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+    line-height: 100%;
+    text-align: right;
+    text-transform: uppercase;
+}
+.ezrss-day,
+.ezrss-month {
+    padding-right: 10px;
+}
+.ezrss-solodate {
+    width: 30%;
+    display: inline-block;
+    font-size: 45px;
+    vertical-align: top;
+    text-align: right;
+}
+.ezrss-month,
+.ezrss-date {
+    display: block;
+}
+.ezrss-year {
+    display: none;
+}
+.ezrss-ezrss-original .ezrss-wrapper{
+    display: block;
+}
+.ezrss-original .ezrss-container{
+    display: block;
+    text-align: left;
+}
+.ezrss-original .ezrss-event{
+    padding-bottom: 0px;
+    line-height: 110%;
+}
+.ezrss-original .ezrss-item {
+    width: 100%;
+    display: block;
+    float: left;
+    padding-bottom: 5px;
+    margin: 0;
+}
+.ezrss-original .ezrss-item:before{
+    display: none;
+}
+.ezrss-original .ezrss-item-inner {
+    width: 96%;
+}
+.ezrss-original .ezrss-header {
+    line-height: 120%;
+    padding-bottom: 5px;
+}
+.ezrss-original .ezrss-datemonth {
+    width: auto;
+    font-size: 16px;
+    vertical-align: top;
+    text-transform: none;
+    line-height: inherit;
+    text-align: left;
+}
+.ezrss-original .ezrss-month {
+    padding: 0;
+}
+.ezrss-original .ezrss-day {
+    padding: 0;
+    position: relative;
+}
+.ezrss-original .ezrss-solodate {
+    width: auto;
+    font-size: 14px;
+    margin: 0;
+    vertical-align: top;
+    position: relative;
+    float: none;
+    padding: 0;
+}
+.ezrss-original .ezrss-month,
+.ezrss-original .ezrss-date {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+}
+.ezrss-original .ezrss-year {
+    display: inline-block;
+    padding: 0px;
+}
+.ezrss-original .ezrss-event-container{
+    margin-bottom: 5px;
+}
+.ezrss-original .ezrss-event-container:hover{
+    background: #ebebeb;
+}
+.ezrss-original .ezrss-event {
+    display: block;
+    width: auto;
+}
+.ezrss-original .ezrss-time {
+    float: left;
+    width: auto;
+    padding-left: 0px;
+}
+.ezrss-original .ezrss-title {
+    float: left;
+    position: relative;
+    width: auto;
+    padding: 0 5px 0 0;
+}
+.ezrss-horizontal .ezrss-item{
+    margin-left: -4px;
+}
+.ezrss-horizontal .ezrss-header *{
+    line-height: 100%;
+}
+.ezrss-horizontal .ezrss-datemonth,
+.ezrss-horizontal .ezrss-solodate{
+    margin-left: -4px;
+    vertical-align: middle;
+}
+.ezrss-horizontal .ezrss-datemonth{
+    text-align: left;
+}
+.ezrss-horizontal .ezrss-solodate{
+    text-align: right;
+}
+@media screen and (max-width:900px) {
+    .ezrss-item{
+        width: 33%;
+    }
+}
+@media screen and (max-width:600px) {
+    .ezrss-item {
+        width: 100%;
+        height: auto !important;
+    }
+    .ezrss-item-inner {
+        width: 90%;
+    }
+    .ezrss-datemonth {
+        width: auto;
+        text-align: left;
+    }
+    .ezrss-solodate{
+        width: auto;
+        text-align: left;
+        float: left;
+        padding-right: 10px;
+    }
+    .ezrss-item:before{
+        display: none;
+    }
+    .ezrss-horizontal .ezrss-datemonth,
+    .ezrss-horizontal .ezrss-day{
+        display: inline-block;
+        float: none;
+    }
+    .ezrss-horizontal .ezrss-datemonth{
+        text-align: right;
+    }
+    .ezrss-horizontal .ezrss-day{
+        text-align: left;
+    }
+}

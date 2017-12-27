@@ -1,0 +1,33 @@
+#ctl00_ContentPlaceHolder1_DocumentLightBox .rltbNextButton {
+    display: none !important;
+}
+
+#ctl00_ContentPlaceHolder1_DocumentLightBox .rltbPrevButton {
+    display: none !important;
+}
+
+#ctl00_ContentPlaceHolder1_DocumentLightBox .rltbMaximizeButton {
+    display: none !important;
+}
+
+#ctl00_ContentPlaceHolder1_DocumentLightBox .rltbMaximizeIcon span {
+    display: none !important;
+}
+
+#ctl00_ContentPlaceHolder1_DocumentLightBox .rltbPager {
+    display: none !important;
+}
+
+.DocumentManager .RadTreeView .rtLines .rtLI {
+    padding-bottom: 6px !important;
+}
+
+.DocumentManager .RadTreeView .rtIn {
+    font-size: 15px;
+}
+
+.DocumentManagerDownloadImg img {
+    top: 0 !important;
+    left: 0 !important;
+    margin: 3px 0 0 6px !important
+}

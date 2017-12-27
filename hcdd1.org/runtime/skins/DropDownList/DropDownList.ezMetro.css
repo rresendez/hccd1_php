@@ -1,0 +1,71 @@
+.RadDropDownList_ezMetro {
+    width: 100%;
+}
+.RadDropDownList_ezMetro:focus {
+    outline: none;
+}
+.RadDropDownList_ezMetro .rddlInner {
+    border-color: transparent;
+    background-color: transparent;
+    line-height: normal;
+}
+.RadDropDownList_ezMetro .rddlEmptyMessage,
+.RadDropDownList_ezMetro .rddlDefaultMessage {}
+
+/* add icon */
+
+.RadDropDownList_ezMetro .rddlIcon {
+    /* background-image: url('Common/radActionsSprite.png'); */
+    width: 23px !important;
+	height: 20px !important;
+    /* icon width*/
+    background-image: url(droparrow.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: #22409a;
+    top: 50% !important;
+    margin-top: -10px;
+	right:5px !important;
+}
+.RadDropDownList_ezMetro .rddlHovered {
+    background-image: url(droparrow_over.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-color: transparent;
+    color: #000;
+    background-color: transparent;
+}
+.RadDropDownList_ezMetro .rddlFocused {
+    background-image: url(droparrow_over.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-color: none;
+}
+
+/*   .RadDrop DownList_ezMetro .rddlHovered .rddlIcon {
+      background-position: -2px -20px;
+}*/
+
+.RadDropDownList_ezMetro .rddlFocused .rddlIcon {
+    outline: none;
+}
+
+/* initial text color */
+
+.rddlDefaultMessage {
+    font-style: normal !important;
+}
+.rddlPopup_ezMetro .rddlHeader,
+.rddlPopup_ezMetro .rddlFooter {
+    border-color: #e5e5e5;
+    color: #000;
+    background-color: #e8e8e8;
+}
+.rddlPopup_ezMetro .rddlItemSelected {
+    color: #fff;
+    background-color: #25a0da;
+}
+.rddlPopup_ezMetro .rddlItemLoading {
+    color: #000;
+    background-color: #e8e8e8;
+}

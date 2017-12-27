@@ -1,0 +1,401 @@
+.ezlayout2 {
+    width: 100%;
+    float: left;
+}
+.ezlayout2Col1 {
+    background-color: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+}
+.ezlayout2Col2 {
+    background-color: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.ezlayout3 {
+    width: 100%;
+    float: left;
+}
+.ezlayout3Col1 {
+    background-color: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-right: 10px;
+}
+.ezlayout3Col2 {
+    background-color: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.ezlayout3Col3 {
+    background-color: transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333%;
+    float: left;
+    padding-left: 10px;
+}
+.widgettable {
+    width: 100%;
+    margin: auto;
+}
+.widgetitem {
+    border: 1px dotted transparent;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    width: 100%;
+    float: left;
+}
+
+/* File Download Security popup */
+
+.securitypop {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    width: 235px;
+}
+.securityheader {
+    font-family: 'MyriadProCondensed';
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.securitytxt {
+    font-family: 'segoe UI', san-serif;
+    font-size: 14px;
+    text-align: left;
+    width: 200px;
+}
+#txtDownName,
+#txtDownPwd {
+    border: 1px solid #bcbcbc;
+    margin-bottom: 15px;
+    width: 235px;
+    height: 25px;
+}
+.securitypop .button {
+    margin-top: 10px;
+    background-color: #fff;
+    font-family: 'MyriadProCondensed';
+    font-size: 18px;
+    color: #666;
+    width: 88px;
+    height: 30px;
+    border: 1px solid #ccc;
+    color: #666;
+    transition-property: background, border-radius;
+    transition-duration: .20s, .20s;
+    transition-timing-function: linear, ease-in;
+}
+.securitypop .button:hover {
+    border-radius: 5px;
+    background-color: #bd0101;
+    color: #fff;
+}
+#msgLightBox {
+    margin-top: 5px;
+    text-align: center;
+    color: #bd0101;
+}
+
+/* remove HD button option from mediaplayer */
+
+.rmpHDButton {
+    display: none !important;
+}
+
+/* remove Fullscreen button option from imagegallery */
+
+.rigFullScrIcon {
+    display: none !important;
+}
+
+/* imagegallery background */
+
+.rigItemBox {
+    background-color: #333 !important;
+}
+
+/* imagegallery thumbnails background */
+
+.rigThumbnailsList {
+    background-color: #333 !important;
+}
+
+/* image widget fit to frame */
+
+.imagesizeit {
+    overflow: hidden;
+    text-align: center;
+}
+.imagesizeitLeft {
+    overflow: hidden;
+    text-align: left;
+}
+.imagesizeitRight {
+    overflow: hidden;
+    text-align: right;
+}
+.imagesizeitLeft img,
+.imagesizeitRight img,
+.imagesizeit img {
+    border: none;
+    width: 100%;
+    height: auto;
+}
+
+/* -------- Use image original size - overeride imagesizeit width -------- */
+
+.Noimagesizeit {
+    width: auto !important;
+    width: initial !important;
+}
+
+/* gallery Rotator*/
+
+.itemTemplate img {
+    width: 100%;
+    height: auto;
+}
+
+/* needs testing for rotator border*/
+
+.itemBorder {
+    border: 6px solid #333 !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* gallery Rotator Horizontal*/
+
+.rrItemsList {
+    width: 100% !important;
+}
+
+/* color event box runtime calendar */
+
+.RadScheduler_Silk .rsAptIn {
+    background: #dadada !important;
+    border: 1px solid #dadada !important
+}
+
+/* MediaPlayer Title bar fix conflicting with settings menu */
+
+.RadMediaPlayer .rmpTitleBar {
+    z-index: 500 !important;
+}
+
+/* DM font */
+
+.RadTreeView_Metro {
+    font: normal 14px/18px "Segoe UI", sans-serif !important;
+}
+
+/* form confirm lightbox */
+
+.RadLightBox .rltbDescriptionBox {
+    display: none !important;
+}
+
+/* image widget rollover */
+
+.imagesizeit .highlite img,
+.imagesizeitLeft .highlite img,
+.imagesizeitRight .highlite img {
+    /* set transition speed */
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.imagesizeit .highlite img:hover,
+.imagesizeitLeft .highlite img:hover,
+.imagesizeitRight .highlite img:hover {
+    /*set hover scale in */
+    -webkit-transform: scale(1.1);
+    /* Saf3.1+, Chrome */
+    -moz-transform: scale(1.1);
+    /* FF3.5+ */
+    -ms-transform: scale(1.1);
+    /* IE9 */
+    -o-transform: scale(1.1);
+    /* Opera 10.5+ */
+    transform: scale(1.1);
+    /* IE6�IE9 */
+    filter: progid: DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713, SizingMethod='auto expand');
+}
+
+/*For tabbing through Rad Menus*/
+.TelerikRadMenu a:focus,
+.TelerikRadMenu span:focus{
+    outline: 5px auto rgb(94, 158, 214) !important;
+}
+/* --------------- Mobile ------------- */
+
+@media screen and (max-width:700px) {
+    .ezlayout2Col1 {
+        width: 100% !important;
+        padding: 0px;
+    }
+    .ezlayout2Col2 {
+        width: 100% !important;
+        padding: 0px;
+    }
+    .ezlayout3Col1 {
+        width: 100% !important;
+        padding: 0px;
+    }
+    .ezlayout3Col2 {
+        width: 100% !important;
+        padding: 0px;
+    }
+    .ezlayout3Col3 {
+        width: 100% !important;
+        padding: 0px;
+    }
+    /* directory email pop-up */
+    #ctl00_ContentPlaceHolder1_SendEmailLightBox {
+        height: 340px !important;
+        top: 23% !important;
+    }
+    #frmSendEmail {
+        width: 310px !important;
+    }
+}
+
+/* ----------- image gallery toolbar ---------- */
+
+@media screen and (max-width:500px) {
+    .rigToolsWrapper {
+        display: none !important;
+    }
+    .rigActiveImage img {
+        padding: 0 !important;
+    }
+    .RadImageGallery_Metro {
+        height: 257px !important;
+    }
+    .rigItemBox {
+        height: 100% !important;
+    }
+}
+
+/* ----------end slide show-------------*/
+
+.rigToolsWrapper {
+    display: none !important;
+}
+
+/*--------------Table Styles--------------*/
+.eztext_area table{
+    width: 100%;
+    table-layout: fixed;
+}
+.ezTableDefault{
+	border: 1px solid #ccc;
+	width: 100%;
+	table-layout: fixed;
+}
+/*Table Cells*/
+.ezTableDefault td:nth-child(n){
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	font-size: 14px;
+	padding: 3px;
+	border-top: 0px dashed #999;
+	border-left: 0px dashed #999;
+}
+/*Table Header Cells*/
+.ezTableDefault tr:first-child td{
+	background-color: #ebebeb;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	font-size: 14px;
+	padding: 3px;
+	height: 35px;
+}
+
+/* Tutorial Video Icon and Vimeo Player*/
+/*.videoLink{
+    color: #fff;
+    float: right;
+    margin: 0 10px;
+}
+.videoLink:hover{
+    cursor: pointer;
+    opacity: .8;
+}*/
+#vimeoModal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .4);
+  opacity: 0;
+  z-index: -10;
+  transition: all .5s ease;
+}
+
+#vimeoModal.open {
+  opacity: 1;
+  z-index: 99999;
+}
+
+#vimeoPlayer {
+  opacity: 0;
+  position: relative;
+}
+
+#vimeoPlayer,
+#vimeoPlayer iframe {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#vimeoPlayerbar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    background: #333;
+    width: 100%;
+    text-align: right;
+}
+#vimeoPlayer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  opacity: 0;
+  line-height: 20px;
+  margin: 0 10px;
+}
+#vimeoPlayer a:hover{
+    color: #ccc;
+}

@@ -1,0 +1,135 @@
+#controlwrapper {
+    font-family: "Segoe UI", helvetica, sans-serif;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+#controlhead .controldate {
+    font-size: 18px;
+    text-align: center;
+    color: #7a7a7a;
+}
+
+#controlhead {
+    margin-bottom: 10px;
+}
+
+#controlhead td a {
+    display: block;
+}
+
+#controlhead td a img {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+#controlhead td:nth-child(1) {
+    width: calc((100% - 135px)/2);
+    text-align: right;
+}
+
+#controlhead td:nth-child(2) {
+    width: 135px;
+    line-height: 26px;
+}
+
+#controlhead td:nth-child(3) {
+    width: calc((100% - 135px)/2);
+    text-align: left;
+}
+
+.controltab {
+    width: 100%;
+    background-color: #ccc;
+}
+
+.controltab .ccd {
+    height: 20px;
+    width: 20px;
+    background-color: #ccc;
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.controltab .ccd a:visited,
+.ccd a:link {
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.controltab td {
+    width: 14%;
+    width: calc(100% / 7);
+    height: 30px;
+}
+
+
+/*Days of week header*/
+
+.ch {
+    color: #666;
+    font-size: 9px;
+    text-decoration: none;
+    text-align: center;
+    background: #f9f9f9;
+    height: 15px !important
+}
+
+
+/* Day with event settings*/
+
+.cc,
+.cw,
+.cs {
+    text-align: center;
+    font-size: 11px;
+    color: #666;
+    background: #fff;
+}
+
+.cc a,
+.cw a,
+.cs a {
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+
+/*Weekends*/
+
+.cw {}
+
+
+/*Active*/
+
+.cc {
+    background: #eee;
+}
+
+.cc:hover {}
+
+.cc a {
+    color: #666;
+    display: block;
+    width: 100%;
+    line-height: 30px;
+}
+
+.cc a:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+
+/*Not weekends and not active*/
+
+.cs {}
